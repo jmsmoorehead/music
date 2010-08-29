@@ -16,7 +16,7 @@ Instruments and I/O:
 * [[midi]]
 
 Making music:
-* metronome and sequencing
-* chords and scales
-* arpeggiators and note generators
-* live-coding
+* [[metronome and sequencing]]
+* [[chords and scales]]
+* [[arpeggiators and note generators]]
+* [[live-coding]]
