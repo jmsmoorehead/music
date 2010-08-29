@@ -4,3 +4,19 @@ The easiest way to get started with Overtone is to use "lein":http://github.com/
 (defproject tutorial "1.0"
   :dependencies [[overtone "0.1.2-SNAPSHOT"]])
 ```
+
+Grab the dependencies, and then take it out for a spin.
+
+```sh
+$ lein deps
+download stuff...
+
+$ lein repl
+```
+
+```clj
+> (use 'overtone.live)
+> (boot)
+> (hit)
+> (hit)
+```
