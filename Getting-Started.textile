@@ -1,0 +1,6 @@
+The easiest way to get started with Overtone is to use "lein":http://github.com/technomancy/leiningen, so make sure you have it installed and working properly.  Then create a new project and add overtone to the dependency list:
+
+```clj
+(defproject tutorial "1.0"
+  :dependencies [[overtone "0.1.2-SNAPSHOT"]])
+```
