@@ -5,18 +5,135 @@ The easiest way to get started with Overtone is to use "lein":http://github.com/
   :dependencies [[overtone "0.1.2-SNAPSHOT"]])
 ```
 
-Grab the dependencies, and then take it out for a spin.
+Grab the dependencies: 
 
 ```sh
 $ lein deps
 download stuff...
+```
 
+A few notes before we start making noise.
+
+h5. Linux
+
+* make sure you have jackd running
+
+h3. Safety Note:
+
+Always start with your volumn turned down low so you don't destroy your ears.
+Synthesized audio can drastically vary in volume depending on the synthesizer
+definition so you need to be careful about playing new sounds, especially when
+using headphones.
+
+Ok, lets take it out for a spin on the repl first.
+
+```sh
 $ lein repl
 ```
 
+You can get access to just about everything by using overtone.live.  Ignore the
+warnings about namespaces, as we are working to get rid of them.
+
 ```clj
 > (use 'overtone.live)
-> (boot)
-> (hit)
-> (hit)
+> (boot) ; boot the SuperCollider synthesis engine
+> (hit)  ; play a simple synth
 ```
+
+If you hear a ping sound when you run @(hit)@ than you have a working setup.
+Now lets define a synth:
+
+```clj
+> (synth (saw 220))
+```
+
+The synth macro takes a synthesizer definition form.  It will compile this form
+down to a SuperCollider synthdef, load it onto the synthesis server, and then
+return a function that can be used to trigger the synth.  So we just created a
+saw wave at 220 hz.  
+
+Be careful, this will
+be at 100% volume!!!
+
+```clj
+> (*1) ; Call the function returned by our synth
+4      ; returns a synth ID number
+> (kill 4) ; kill the synth with ID 4
+```
+
+Synth trigger functions return an ID that can be used to modify or kill
+instances.
+
+The @saw@ function represents a "unit-generator":http://danielnouri.org/docs/SuperColliderHelp/UGens/UGens.html, or ugen:http://danielnouri.org/docs/SuperColliderHelp/UGens/UGens.html (sounds like "you jen").  These are the basic building blocks for creating synthesizers, and they can
+generate or process both audio and control signals.  Check the link for
+descriptions of many ugens from the SC documentation.  Also, they all have doc
+strings in Overtone.
+
+```clj
+> (doc saw)
+-------------------------
+overtone.live/saw
+([freq])
+  [ freq 440.0 ]
+  band limited sawtooth wave generator
+  Categories: Generators -> Deterministic
+  Rates: [ :ar ]
+```
+
+Synths can take arguments: 
+
+```clj
+> (synth [freq 220] (saw freq))
+> (*1 110)
+5
+> (kill 5)
+```
+
+and you can use @defsynth@ to create named synths:
+
+```clj
+> (defsynth foo [freq 440] (* 0.3 (saw freq)))
+> (foo 220)
+> (foo 660)
+> (reset) ; stop all running synths
+```
+
+Remember @(reset)@, as it can save you when accidentally trigger a bunch of
+synths and you need to kill the audio fast.
+
+When this synth is running the saw wave ugen is outputing an audio signal.  This
+signal is represented as a continuous stream of floating point values between -1
+and 1, so by multiplying by 0.3 we are just lowering the amplitude of this
+signal, adjusting the volume.
+
+So far we've just used a single ugen and passed it arguments, but ugens can be
+plugged into each other in arbitrary ways too.  Basically anywhere a ugen takes
+an argument value it can also take an input signal that will control that value.
+Lets put a tremolo on our saw wave:
+
+```clj
+> (defsynth foo [freq 440 depth 10 rate 6 length 3] 
+    (* 0.3 
+       (line:kr 0 1 length :free) 
+       (saw (+ freq (* depth (sin-osc:kr rate))))))
+> (foo)
+4
+> (kill 4)
+> (foo 200 60 0.8)
+4
+> (kill 4)
+> (foo 60 30 0.2)
+...
+```
+The @line@ ugen outputs a value from the start value to the end value over a
+specific length of time.  In this example we use it as a simple way to stop the
+synth after a few seconds.  The last argument, :free, is a typical argument to
+this kind of control ugen that tells the ugen to free the whole synth instance
+once it completes.  That way you don't have to @kill@ it by hand anymore.
+
+Also note that the line and sin oscillator ugens have the :kr suffix.  Many of
+the ugens can operate at different rates, shown at the bottom of the doc string.
+The two primary rates are audio rate and control rate, :ar and :kr.  Audio rate
+runs at the rate of your audio card, and control rate runs at about 1/60 of that
+speed, so for signals that are just controlling a value rather than outputting
+audio you can save wasted CPU by using :kr.
