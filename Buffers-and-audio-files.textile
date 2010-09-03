@@ -1,4 +1,4 @@
-You can load a wav file into an audio buffer using @(load-sample <path>)@ :
+You can load a wav file into an audio buffer using @(load-sample <path>)@:
 
 ```clj
 (def flute-buf (load-sample "/home/rosejn/studio/samples/flutes/flutey-echo-intro-blast.wav"))
@@ -10,7 +10,7 @@ Buffers are in-memory storage spots for audio files, and they can be either read
 (scope-buf flute-buf)
 ```
 
-While loading samples is nice, most of the time you'll want to load a sample and return a function that can be used to trigger the sample.  This can be done with @(sample <path>)@ .
+While loading samples is nice, most of the time you'll want to load a sample and return a function that can be used to trigger the sample.  This can be done with @(sample <path>)@.
 
 ```clj
 (def flute (sample "/home/rosejn/studio/samples/flutes/flutey-echo-intro-blast.wav"))
