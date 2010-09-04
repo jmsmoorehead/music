@@ -26,6 +26,7 @@ To register a callback function to receive midi events from an input device just
 To output midi you can send events directly to a device:
 
 ```clj
+
 ; Using a software virtual midi driver you can route midi from one program to another
 (def ableton (midi-out))
 
@@ -34,4 +35,4 @@ To output midi you can send events directly to a device:
 
 ; Now stop the note
 (midi-note-off ableton 60)
-
+```
