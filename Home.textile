@@ -20,3 +20,6 @@ Making music:
 * [[chords and scales]]
 * [[arpeggiators and note generators]]
 * [[live-coding]]
+
+In progress:
+* [[sessions and instruments]]
