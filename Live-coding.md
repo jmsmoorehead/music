@@ -32,7 +32,7 @@ Then you can create a metronome with a specific BPM (beats per minute).  The @(m
 Now that we have everything ready, we can define a function that will recurse through time, each iteration triggering the next beat.  By passing the function to itself using the @#'player@ type notation we are passing the var @player@ rather than the current value of that var.  In this way the new value will be looked up every iteration, which allows us to continually redefine the function as it's playing.  Try commenting out the hi-hat line, or adjusting when it gets triggered, and then re-evaluate the function while it is still playing.
 
 ```clj
-(def player [beat]
+(defn player [beat]
   (at (metro beat) (kick))
   (at (metro (+ 0.5 beat)) (c-hat))
   (apply-at #'player (metro (inc beat)) (inc beat)))
