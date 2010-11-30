@@ -98,6 +98,9 @@ and you can use @definst@ to create named synths:
 Remember @(reset)@, as it can save you when accidentally trigger a bunch of
 synths and you need to kill the audio fast.
 
+Note: There is a bug in reset.  If subsequent commands give "FAILURE /s_new Group not found" errors,
+then restart the repl. 
+
 When this synth is running the saw wave ugen is outputing an audio signal.  This
 signal is represented as a continuous stream of floating point values between -1
 and 1, so by multiplying by 0.3 we are just lowering the amplitude of this
