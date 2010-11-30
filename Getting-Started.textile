@@ -106,6 +106,14 @@ signal is represented as a continuous stream of floating point values between -1
 and 1, so by multiplying by 0.3 we are just lowering the amplitude of this
 signal, adjusting the volume.
 
+We can change paramaters of the running synth on the fly
+
+```clj
+> (definst foo [freq 440] (* 0.3 (saw freq)))
+> (foo)
+> (foo :ctl :freq 660)
+```
+
 So far we've just used a single ugen and passed it arguments, but ugens can be
 plugged into each other in arbitrary ways too.  Basically anywhere a ugen takes
 an argument value it can also take an input signal that will control that value.
