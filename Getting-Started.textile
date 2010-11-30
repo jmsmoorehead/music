@@ -36,18 +36,15 @@ warnings about namespaces, as we are working to get rid of them.
 
 ```clj
 > (use 'overtone.live)
-> (boot) ; boot the SuperCollider synthesis engine
-> (hit)  ; play a simple synth
 ```
 
-If you hear a ping sound when you run @(hit)@ than you have a working setup.
 Now lets define a synth:
 
 ```clj
-> (synth (saw 220))
+> (inst (saw 220))
 ```
 
-The synth macro takes a synthesizer definition form.  It will compile this form
+Inst calls the synth macro which takes a synthesizer definition form.  It will compile this form
 down to a SuperCollider synthdef, load it onto the synthesis server, and then
 return a function that can be used to trigger the synth.  So we just created a
 saw wave at 220 hz.  
