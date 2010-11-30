@@ -77,19 +77,19 @@ overtone.live/saw
   Rates: [ :ar ]
 ```
 
-Synths can take arguments: 
+Insts can take arguments: 
 
 ```clj
-> (synth [freq 220] (saw freq))
+> (inst [freq 220] (saw freq))
 > (*1 110)
 5
 > (kill 5)
 ```
 
-and you can use @defsynth@ to create named synths:
+and you can use @definst@ to create named synths:
 
 ```clj
-> (defsynth foo [freq 440] (* 0.3 (saw freq)))
+> (definst foo [freq 440] (* 0.3 (saw freq)))
 > (foo 220)
 > (foo 660)
 > (reset) ; stop all running synths
@@ -109,7 +109,7 @@ an argument value it can also take an input signal that will control that value.
 Lets put a tremolo on our saw wave:
 
 ```clj
-> (defsynth foo [freq 440 depth 10 rate 6 length 3] 
+> (definst foo [freq 440 depth 10 rate 6 length 3] 
     (* 0.3 
        (line:kr 0 1 length :free) 
        (saw (+ freq (* depth (sin-osc:kr rate))))))
