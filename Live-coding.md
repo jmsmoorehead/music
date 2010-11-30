@@ -1,7 +1,7 @@
 First define some instruments:
 
 ```clj
-(defsynth kick [freq 120 dur 0.3 width 0.5]
+(definst kick [freq 120 dur 0.3 width 0.5]
   (let [freq-env (* freq (env-gen (perc 0 (* 0.99 dur))))
         env (env-gen (perc 0.01 dur) 1 1 0 1 :free)
         sqr (* (env-gen (perc 0 0.01)) (pulse (* 2 freq) width))
@@ -11,7 +11,7 @@ First define some instruments:
 
 ;(kick)
 
-(defsynth c-hat [amp 0.8 t 0.04]
+(definst c-hat [amp 0.8 t 0.04]
   (let [env (env-gen (perc 0.001 t) 1 1 0 1 :free)
         noise (white-noise)
         sqr (* (env-gen (perc 0.01 0.04)) (pulse 880 0.2))
