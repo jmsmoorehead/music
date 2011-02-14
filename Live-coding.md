@@ -35,7 +35,7 @@ Now that we have everything ready, we can define a function that will recurse th
 (defn player [beat]
   (at (metro beat) (kick))
   (at (metro (+ 0.5 beat)) (c-hat))
-  (apply-at #'player (metro (inc beat)) (inc beat)))
+  (apply-at (metro (inc beat)) #'player (inc beat)))
 
 (player (metro))
 ```
