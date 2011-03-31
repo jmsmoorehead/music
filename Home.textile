@@ -23,3 +23,6 @@ Making music:
 
 In progress:
 * [[sessions and instruments]]
+
+Development:
+* [[Comparing SC-lang and Overtone synthdefs]]
