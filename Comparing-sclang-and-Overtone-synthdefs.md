@@ -1,4 +1,3 @@
-
 ## Synth Design Issues
 
 If you're having trouble with a particular synth design, it's possible that there are bugs in the way Overtone generates the synthdef. This is a process we're continuing to iron out but is still probably the most fragile part of Overtone. Typical issues are:
