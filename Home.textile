@@ -25,4 +25,4 @@ In progress:
 * [[sessions and instruments]]
 
 Development:
-* [[Comparing SC-lang and Overtone synthdefs]]
+* [[Comparing sclang and Overtone synthdefs]]
