@@ -21,7 +21,7 @@ First define some instruments:
 ;(c-hat)
 ```
 
-Then you can create a metronome with a specific BPM (beats per minute).  The @(metronome <bpm>)@ returns a function that can be used to synchronize multiple instruments to the same rhythm.  The metronome remembers the time at which it was started and then when called with no arguments it will return the current beat count.  (i.e. # of beats since the start)  If called with one argument, a beat number, then a metronome function will return the absolute timestamp in milliseconds that that beat will occur.  This timestamp can be used to schedule events at a specific beat.
+Then you can create a metronome with a specific BPM (beats per minute).  The ```(metronome <bpm>)``` returns a function that can be used to synchronize multiple instruments to the same rhythm.  The metronome remembers the time at which it was started and then when called with no arguments it will return the current beat count.  (i.e. # of beats since the start)  If called with one argument, a beat number, then a metronome function will return the absolute timestamp in milliseconds that that beat will occur.  This timestamp can be used to schedule events at a specific beat.
 ```clj
 (def metro (metronome 128))
 
@@ -29,7 +29,7 @@ Then you can create a metronome with a specific BPM (beats per minute).  The @(m
 (metro 100) ; => timestamp of 100th beat
 ```
 
-Now that we have everything ready, we can define a function that will recurse through time, each iteration triggering the next beat.  By passing the function to itself using the @#'player@ type notation we are passing the var @player@ rather than the current value of that var.  In this way the new value will be looked up every iteration, which allows us to continually redefine the function as it's playing.  Try commenting out the hi-hat line, or adjusting when it gets triggered, and then re-evaluate the function while it is still playing.
+Now that we have everything ready, we can define a function that will recurse through time, each iteration triggering the next beat.  By passing the function to itself using the ```#'player``` type notation we are passing the var `player` rather than the current value of that var.  In this way the new value will be looked up every iteration, which allows us to continually redefine the function as it's playing.  Try commenting out the hi-hat line, or adjusting when it gets triggered, and then re-evaluate the function while it is still playing.
 
 ```clj
 (defn player [beat]
