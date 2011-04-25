@@ -92,10 +92,10 @@ and you can use @definst@ to create named synths:
 > (definst foo [freq 440] (* 0.3 (saw freq)))
 > (foo 220)
 > (foo 660)
-> (reset) ; stop all running synths
+> (stop) ; stop all running synths
 ```
 
-Remember @(reset)@, as it can save you when accidentally trigger a bunch of
+Remember @(stop)@, as it can save you when accidentally trigger a bunch of
 synths and you need to kill the audio fast.
 
 Note: There is a bug in reset.  If subsequent commands give "FAILURE /s_new Group not found" errors,
