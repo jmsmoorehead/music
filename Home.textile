@@ -3,6 +3,7 @@ Welcome to Project Overtone!
 Overtone is a musical programming library written in Clojure.  It uses the "SuperCollider":http://supercollider.sourceforge.net/ audio engine and synthesis libraries under the covers, but our goal is to create a top notch live-coding environment and audio collaboration platform.  We will try to maintain documentation for all aspects of the system here, but beyond the basics feel free to pick and choose the topics that interest you.  Some people might want to focus on synthesizing new sounds from scratch, while for others it might be more interesting to focus on live-coding or generating musical scores on the fly.
 
 [[Getting Started]]
+[[Installing SuperCollider]]
 
 Synthesis:
 * [[oscillators]]
