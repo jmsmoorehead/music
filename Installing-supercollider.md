@@ -51,6 +51,7 @@ Now you need to point cmake to your installed SuperCollider.  On Linux the stand
 `make`
 
 `sudo make install`
+
 `sudo ldconfig`
 
 ### Run supercollider
