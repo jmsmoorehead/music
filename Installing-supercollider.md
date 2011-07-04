@@ -46,11 +46,12 @@ Now compile and install:
 
 Now you need to point cmake to your installed SuperCollider.  On Linux the standard install from source goes to /usr/local/include/SuperCollider/, but update it to wherever you installed it.
 
-`cmake -DSC_PATH=/usr/local/include/supercollider/ ..`
+`cmake -DSC_PATH=/usr/local/include/SuperCollider/ ..`
 
 `make`
 
 `sudo make install`
+`sudo ldconfig`
 
 ### Run supercollider
 
