@@ -60,3 +60,8 @@ Listening on UDP port 2345:
 
 `/usr/local/bin/scsynth -u 2345`
 
+### Misc
+
+If you have problem with Help.gui, maybe you should make this directory writable:
+
+`chmod +w ~/share/SuperCollider/Help` 
