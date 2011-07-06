@@ -15,6 +15,7 @@ Synthesis:
 Instruments and I/O:
 * [[buffers and audio files]]
 * [[midi]]
+* [[recording]]
 
 Making music:
 * [[metronome and sequencing]]
