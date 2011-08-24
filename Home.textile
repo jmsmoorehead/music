@@ -5,6 +5,7 @@ Overtone is a musical programming library written in Clojure.  It uses the "Supe
 [[Getting Started]]
 [[Connecting to an external SuperCollider server]]
 [[Installing SuperCollider]]
+"Overtone Cheat Sheet":http://cloud.github.com/downloads/overtone/overtone/overtone-cheat-sheet-a4.pdf
 
 Synthesis:
 * [[oscillators]]
