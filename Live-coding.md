@@ -22,6 +22,7 @@ First define some instruments:
 ```
 
 Then you can create a metronome with a specific BPM (beats per minute).  The ```(metronome <bpm>)``` returns a function that can be used to synchronize multiple instruments to the same rhythm.  The metronome remembers the time at which it was started and then when called with no arguments it will return the current beat count.  (i.e. # of beats since the start)  If called with one argument, a beat number, then a metronome function will return the absolute timestamp in milliseconds that that beat will occur.  This timestamp can be used to schedule events at a specific beat.
+
 ```clj
 (def metro (metronome 128))
 
