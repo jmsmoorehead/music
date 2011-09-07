@@ -42,6 +42,7 @@ Now that we have everything ready, we can define a function that will recurse th
 ```
 
 Change the playback speed by sending a message to metro like this:
+
 ```clj
 (metro :bpm 120)
 ```
