@@ -9,11 +9,12 @@ Connecting is simple. You have two options:
 * make sure your server is running. (If you're using the standard SuperCollider distribution this will mean booting the 'localhost' server). 
 * find out which port the server is listening on (this is typically `57110` for the SuperCollider localhost server)
 * use `overtone.core` either directly or in your `ns` declaration
-* call `(connect 57110)` (replacing the port with the specific port you wish to use.)
+* call `(connect-external-server 57110)` (replacing the port with the specific port you wish to use.)
+* If the server is on a different machine use `(connect-external-server 192.168.1.23 57110)` substituting the appropriate name and port number
 
 ##Explicitly boot a server with Overtone
 
 * use `overtone.core` either directly or in your `ns` declaration
-* call `(boot :external)`
+* call `(boot-external-server)`
 
 Now you can continue to use Overtone as usual - define synths, trigger them, have fun!
