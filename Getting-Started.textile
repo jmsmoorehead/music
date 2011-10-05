@@ -41,7 +41,7 @@ warnings about namespaces, as we are working to get rid of them.
 Now lets define a synth:
 
 ```clj
-> (inst (saw 220))
+> (definst foo [] (saw 220))
 ```
 
 Inst calls the synth macro which takes a synthesizer definition form.  It will compile this form
@@ -53,9 +53,10 @@ Be careful, this will
 be at 100% volume!!!
 
 ```clj
-> (*1) ; Call the function returned by our synth
+> (foo) ; Call the function returned by our synth
 4      ; returns a synth ID number
 > (kill 4) ; kill the synth with ID 4
+> (kill foo) ; or kill all instances of synth foo
 ```
 
 Synth trigger functions return an ID that can be used to modify or kill
@@ -66,52 +67,62 @@ generate or process both audio and control signals.  Check the link for
 descriptions of many ugens from the SC documentation.  Also, they all have doc
 strings in Overtone.
 
-```clj
+```
 > (doc saw)
--------------------------
-overtone.live/saw
-([freq])
-  [ freq 440.0 ]
-  band limited sawtooth wave generator
-  Categories: Generators -> Deterministic
-  Rates: [ :ar ]
+-------------------------                             
+overtone.live/saw                                     
+([freq])                                              
+                                                      
+  [freq 440.0]                                        
+                                                      
+  freq - Frequency in Hertz (control rate).           
+                                                      
+  Band limited sawtooth wave generator                
+                                                      
+  Categories: Generators -> Deterministic             
+  Rates: [ :ar ]                                      
+  Default rate: :ar                                   
 ```
 
 Insts can take arguments: 
 
 ```clj
-> (inst [freq 220] (saw freq))
-> (*1 110)
+> (definst bar [freq 220] (saw freq))
+> (bar 110)
 5
-> (kill 5)
+> (kill bar)
 ```
 
-and you can use @definst@ to create named synths:
+you can also trigger multiple synths and kill them all with one kill command:
 
 ```clj
-> (definst foo [freq 440] (* 0.3 (saw freq)))
-> (foo 220)
-> (foo 660)
-> (stop) ; stop all running synths
+> (definst baz [freq 440] (* 0.3 (saw freq)))
+> (baz 220)
+> (baz 660)
+> (kill baz) ; stop all running synths
 ```
 
 Remember @(stop)@, as it can save you when accidentally trigger a bunch of
 synths and you need to kill the audio fast.
 
-Note: There is a bug in reset.  If subsequent commands give "FAILURE /s_new Group not found" errors,
-then restart the repl. 
+```clj
+> (foo)
+> (bar)
+> (baz)
+> (stop) ; stop all running synths
+```
 
 When this synth is running the saw wave ugen is outputing an audio signal.  This
 signal is represented as a continuous stream of floating point values between -1
 and 1, so by multiplying by 0.3 we are just lowering the amplitude of this
 signal, adjusting the volume.
 
-We can change paramaters of the running synth on the fly
+We can change paramaters of the running synth on the fly with @ctl@
 
 ```clj
-> (definst foo [freq 440] (* 0.3 (saw freq)))
-> (foo)
-> (foo :ctl :freq 660)
+> (definst quux [freq 440] (* 0.3 (saw freq)))
+> (quux)
+> (ctl quux :freq 660)
 ```
 
 So far we've just used a single ugen and passed it arguments, but ugens can be
@@ -120,22 +131,22 @@ an argument value it can also take an input signal that will control that value.
 Lets put a tremolo on our saw wave:
 
 ```clj
-> (definst foo [freq 440 depth 10 rate 6 length 3] 
+> (definst trem [freq 440 depth 10 rate 6 length 3] 
     (* 0.3 
-       (line:kr 0 1 length :free) 
+       (line:kr 0 1 length FREE) 
        (saw (+ freq (* depth (sin-osc:kr rate))))))
-> (foo)
+> (trem)
 4
-> (kill 4)
-> (foo 200 60 0.8)
+> (kill trem)
+> (trem 200 60 0.8)
 4
-> (kill 4)
-> (foo 60 30 0.2)
+> (kill trem)
+> (trem 60 30 0.2)
 ...
 ```
 The @line@ ugen outputs a value from the start value to the end value over a
 specific length of time.  In this example we use it as a simple way to stop the
-synth after a few seconds.  The last argument, :free, is a typical argument to
+synth after a few seconds.  The last argument, @FREE@, is a typical argument to
 this kind of control ugen that tells the ugen to free the whole synth instance
 once it completes.  That way you don't have to @kill@ it by hand anymore.
 
