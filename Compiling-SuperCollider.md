@@ -1,8 +1,8 @@
-NOTE: Please help keep this page up to date!  Feel free to update these instructions if you run into problems on a specific platform or with a certain install method.
+> NOTE: Please help keep this page up to date!  Feel free to update these instructions if you run into problems on a specific platform or with a certain install method.
 
-### Binaries
+### Only compile your own binaries if you really need to
 
-Unless you need something particular from the bleeding edge, it's probably easiest to install pre-compiled binaries for your platform, which are available on the SuperCollider site here:
+Unless you need something particular from the bleeding edge, it's probably easiest to either use the internal server binaries which are distributed as part of Overtone or to install and use pre-compiled binaries for your platform, which are available on the SuperCollider site here:
 
 [http://supercollider.sourceforge.net/downloads/](http://supercollider.sourceforge.net/downloads/)
 
