@@ -10,7 +10,7 @@ Connecting is simple. You have two options:
 * find out which port the server is listening on (this is typically `57110` for the SuperCollider localhost server)
 * use `overtone.core` either directly or in your `ns` declaration
 * call `(connect-external-server 57110)` (replacing the port with the specific port you wish to use.)
-* If the server is on a different machine use `(connect-external-server "192.168.1.23" 57110)` substituting the appropriate name and port number
+* If the server is on a different machine use `(connect-external-server "192.168.1.23" 57110)` substituting the appropriate hostname and port number
 
 ##Explicitly boot a server with Overtone
 
