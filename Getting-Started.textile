@@ -2,7 +2,7 @@ The easiest way to get started with Overtone is to use "lein":http://github.com/
 
 ```clj
 (defproject tutorial "1.0"
-  :dependencies [[overtone "0.1.5"]])
+  :dependencies [[overtone "0.4.0"]])
 ```
 
 Grab the dependencies: 
