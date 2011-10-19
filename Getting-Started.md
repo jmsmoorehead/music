@@ -4,9 +4,7 @@ OK, so we're assuming that you've already installed Overtone, started a REPL and
 * [[Starting a REPL]]
 * [[Booting scsynth]]
 
-lets take it out for a spin on the REPL
-
-Now lets define a synth:
+First let's define a synth:
 
 ```clj
 > (definst foo [] (saw 220))
