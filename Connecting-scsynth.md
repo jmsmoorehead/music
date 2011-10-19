@@ -13,10 +13,39 @@ Note - the internal server is not currently supported for all architecture/opera
 Let's summarise that:
 
 * Internal Server
-  - Good - Using the scope to visualise audio and buffers. Fast retrieval of audio buffers.
-  - Bad  - Crashes whole JVM when scsynth crashes, doesn't work everywhere.
+  - Good - Using the scope to visualise audio and buffers. Fast retrieval of audio buffers. Super simple to use.
+  - Bad  - Crashes whole JVM when scsynth crashes, doesn't work everywhere and doesn't allow for multiple clients to connect to the same server (although you can coordinate external systems through Overtone itself)
 * External Server
   - Good - More robust setup. Allows for multiple clients to be connected to the same server.
   - Bad  - No scope or fast audio buffer retrieval (although you still can access buffer data much more slowly)
 
 OK, let's discuss connecting to internal and external servers separately.
+
+### Connecting to an Internal Server
+
+This is super easy. We simply issue the following statement to our Clojure REPL:
+
+    user=>(use 'overtone.live)
+
+Clojure will then diligently fire up an internal server process and connect to it for us. When the prompt returns, we're ready to go.
+
+### Connecting to an External Server
+
+In order to connect to an external server you need to manually install SuperCollider. Head here: http://supercollider.sourceforge.net/ and install a version for your architecture. If you're running Linux, make sure that the `scsynth` executable is in your `PATH`.
+
+Before you connect you need to choose whether you want to boot or connect.
+
+##Connect to a currently running server
+
+* make sure your server is running. (If you're using the standard SuperCollider distribution this will mean booting the 'localhost' server). 
+* find out which port the server is listening on (this is typically `57110` for the SuperCollider localhost server)
+* use `overtone.core` either directly or in your `ns` declaration
+* call `(connect-external-server 57110)` (replacing the port with the specific port you wish to use.)
+* If the server is on a different machine use `(connect-external-server "192.168.1.23" 57110)` substituting the appropriate hostname and port number
+
+##Explicitly boot a server from within Overtone
+
+* use `overtone.core` either directly or in your `ns` declaration
+* call `(boot-external-server)`
+
+Now you can continue to use Overtone as usual - define synths, trigger them, have fun!
