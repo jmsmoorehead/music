@@ -67,7 +67,7 @@ you can also trigger multiple synths and kill them all with one kill command:
 > (kill baz) ; stop all running synths
 ```
 
-Remember @(stop)@, as it can save you when accidentally trigger a bunch of
+Remember `(stop)`, as it can save you when accidentally trigger a bunch of
 synths and you need to kill the audio fast.
 
 ```clj
@@ -82,7 +82,7 @@ signal is represented as a continuous stream of floating point values between -1
 and 1, so by multiplying by 0.3 we are just lowering the amplitude of this
 signal, adjusting the volume.
 
-We can change paramaters of the running synth on the fly with @ctl@
+We can change paramaters of the running synth on the fly with `ctl`
 
 ```clj
 > (definst quux [freq 440] (* 0.3 (saw freq)))
@@ -109,15 +109,15 @@ Lets put a tremolo on our saw wave:
 > (trem 60 30 0.2)
 ...
 ```
-The @line@ ugen outputs a value from the start value to the end value over a
+The `line` ugen outputs a value from the start value to the end value over a
 specific length of time.  In this example we use it as a simple way to stop the
-synth after a few seconds.  The last argument, @FREE@, is a typical argument to
+synth after a few seconds.  The last argument, `FREE`, is a typical argument to
 this kind of control ugen that tells the ugen to free the whole synth instance
-once it completes.  That way you don't have to @kill@ it by hand anymore.
+once it completes.  That way you don't have to `kill` it by hand anymore.
 
-Also note that the line and sin oscillator ugens have the :kr suffix.  Many of
+Also note that the line and sin oscillator ugens have the `:kr` suffix.  Many of
 the ugens can operate at different rates, shown at the bottom of the doc string.
-The two primary rates are audio rate and control rate, :ar and :kr.  Audio rate
+The two primary rates are audio rate and control rate, `:ar` and `:kr`.  Audio rate
 runs at the rate of your audio card, and control rate runs at about 1/60 of that
 speed, so for signals that are just controlling a value rather than outputting
-audio you can save wasted CPU by using :kr.
+audio you can save wasted CPU by using `:kr`.
