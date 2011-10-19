@@ -14,6 +14,8 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 
 #### Installation
 * [[Installing Overtone]]
+* [[Starting a REPL]]
+* [[Connecting scsynth]]
 * [[Installing and Starting Jack]] (for Linux users)
 
 #### First steps
