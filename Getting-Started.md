@@ -1,8 +1,8 @@
-OK, so we're assuming that you've already installed Overtone, started a REPL and booted the scsynth server. If not, these pages will help you:
+OK, so we're assuming that you've already installed Overtone, started a REPL and have connected to an scsynth server. If not, these pages will help you:
 
 * [[Installing Overtone]]
 * [[Starting a REPL]]
-* [[Booting scsynth]]
+* [[Connecting scsynth]]
 
 First let's define a synth:
 
