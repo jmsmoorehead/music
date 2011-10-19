@@ -1,38 +1,10 @@
-The easiest way to get started with Overtone is to use either [cake](http://clojure-cake.org/) or [lein](http://github.com/technomancy/leiningen), so make sure you have one installed and working properly. If you're up for using straight-naked [Maven](http://maven.apache.org/) then you just need to translate the `project.clj` into a basic `pom.xml` file.
+OK, so we're assuming that you've already installed Overtone, started a REPL and booted the scsynth server. If not, these pages will help you:
 
-First up, create a new project
+* [[Installing Overtone]]
+* [[Starting a REPL]]
+* [[Booting scsynth]]
 
-```sh
-$ cake new tutorial
-```
-
-Then add Overtone to the dependency list:
-
-```clj
-(defproject tutorial "1.0"
-  :dependencies [[overtone "0.5.0"]])
-```
-Note - if you wish to specify Clojure in your `:dependencies` ensure that it is at least version `1.3.0`.
-
-Grab the dependencies:
-
-```sh
-$ cake deps
-# watch it download stuff...
-```
-
-Ok, lets take it out for a spin on the repl first.
-
-```sh
-$ cake repl
-```
-
-You can get access to just about everything by using overtone.live.  Ignore the
-warnings about namespaces, as we are working to get rid of them.
-
-```clj
-> (use 'overtone.live)
-```
+lets take it out for a spin on the REPL
 
 Now lets define a synth:
 
