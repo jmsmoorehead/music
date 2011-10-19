@@ -16,9 +16,6 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 * [[Installing Overtone]]
 * [[Installing and Starting Jack]] (for Linux users)
 
-#### Connecting to a Server
-* [[Connecting to an external SuperCollider server]]
-
 #### First steps
 * [Overtone Cheat Sheet](http://cloud.github.com/downloads/overtone/overtone/overtone-cheat-sheet.pdf)
 * [[Getting Started]]
