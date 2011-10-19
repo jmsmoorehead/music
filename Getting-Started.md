@@ -1,42 +1,30 @@
-The easiest way to get started with Overtone is to use "lein":http://github.com/technomancy/leiningen, so make sure you have it installed and working properly.  Then create a new project and add overtone to the dependency list:
+The easiest way to get started with Overtone is to use either [cake](http://clojure-cake.org/) or [lein](http://github.com/technomancy/leiningen), so make sure you have one installed and working properly. If you're up for using straight-naked [Maven](http://maven.apache.org/) then you just need to translate the `project.clj` into a basic `pom.xml` file.
+
+First up, create a new project
+
+```sh
+$ cake new tutorial
+```
+
+Then add Overtone to the dependency list:
 
 ```clj
 (defproject tutorial "1.0"
-  :dependencies [[overtone "0.4.0"]])
+  :dependencies [[overtone "0.5.0"]])
 ```
+Note - if you wish to specify Clojure in your `:dependencies` ensure that it is at least version `1.3.0`.
 
-Grab the dependencies: 
+Grab the dependencies:
 
 ```sh
-$ lein deps
-download stuff...
+$ cake deps
+# watch it download stuff...
 ```
-
-A few notes before we start making noise.
-
-h5. Linux
-
-```sh     
-sudo apt-get install jack-tools ant openjdk-6-jdk fftw3 qjackctl
-```
-
-You'll need to get the jack audio daemon running, and we recommend qjackctl to figure out what command will be best to use.  Then once you have it dialed in you can switch to using the terminal.  For best performance you need to install a realtime enabled kernel, which allows the audio system to get high scheduled immediately when there is data to process.  With purely generative music this isn't such a big deal, but if you want to jam with other instruments or process external sound in realtime then you'll want to invest the effort in setting up an rt-kernel.  Ubuntu studio makes it pretty easy, especially if you aren't experienced in compiling the kernel.  In the meantime, just turn-off the realtime support in the qjacktl options, and the audio server should boot. 
-
-You can create a .jackdrc file with this command to automatically start the jack server on boot, or you will need to run it manually to start the Jack audio server: 
-```sh
-$ jackd -r -d alsa -r 44100 ; or use qjackctl for a gui
-```
-
-Future versions will also support ALSA audio.
-
-h3. Safety Note:
-
-Always start with your volumn turned down low so you don't destroy your ears. Synthesized audio can drastically vary in volume depending on the synthesizer definition so you need to be careful about playing new sounds, especially when using headphones.
 
 Ok, lets take it out for a spin on the repl first.
 
 ```sh
-$ lein repl
+$ cake repl
 ```
 
 You can get access to just about everything by using overtone.live.  Ignore the
@@ -55,7 +43,7 @@ Now lets define a synth:
 Inst calls the synth macro which takes a synthesizer definition form.  It will compile this form
 down to a SuperCollider synthdef, load it onto the synthesis server, and then
 return a function that can be used to trigger the synth.  So we just created a
-saw wave at 220 hz.  
+saw wave at 220 hz.
 
 Be careful, this will
 be at 100% volume!!!
@@ -70,29 +58,28 @@ be at 100% volume!!!
 Synth trigger functions return an ID that can be used to modify or kill
 instances.
 
-The @saw@ function represents a "unit-generator":http://danielnouri.org/docs/SuperColliderHelp/UGens/UGens.html, or ugen:http://danielnouri.org/docs/SuperColliderHelp/UGens/UGens.html (sounds like "you jen").  These are the basic building blocks for creating synthesizers, and they can
-generate or process both audio and control signals.  Check the link for
+The `saw` function represents a [unit-generator](http://danielnouri.org/docs/SuperColliderHelp/UGens/UGens.html), or [ugen](http://danielnouri.org/docs/SuperColliderHelp/UGens/UGens.html) (sounds like "you jen").  These are the basic building blocks for creating synthesizers, and they can generate or process both audio and control signals.  Check the link for
 descriptions of many ugens from the SC documentation.  Also, they all have doc
 strings in Overtone.
 
 ```
 > (doc saw)
--------------------------                             
-overtone.live/saw                                     
-([freq])                                              
-                                                      
-  [freq 440.0]                                        
-                                                      
-  freq - Frequency in Hertz (control rate).           
-                                                      
-  Band limited sawtooth wave generator                
-                                                      
-  Categories: Generators -> Deterministic             
-  Rates: [ :ar ]                                      
-  Default rate: :ar                                   
+-------------------------
+overtone.live/saw
+([freq])
+
+  [freq 440.0]
+
+  freq - Frequency in Hertz (control rate).
+
+  Band limited sawtooth wave generator
+
+  Categories: Generators -> Deterministic
+  Rates: [ :ar ]
+  Default rate: :ar
 ```
 
-Insts can take arguments: 
+Insts can take arguments:
 
 ```clj
 > (definst bar [freq 220] (saw freq))
@@ -139,9 +126,9 @@ an argument value it can also take an input signal that will control that value.
 Lets put a tremolo on our saw wave:
 
 ```clj
-> (definst trem [freq 440 depth 10 rate 6 length 3] 
-    (* 0.3 
-       (line:kr 0 1 length FREE) 
+> (definst trem [freq 440 depth 10 rate 6 length 3]
+    (* 0.3
+       (line:kr 0 1 length FREE)
        (saw (+ freq (* depth (sin-osc:kr rate))))))
 > (trem)
 4

@@ -8,36 +8,41 @@ Overtone is a musical programming library written in [Clojure](http://clojure.or
 ### About this Documentation
 We will try to maintain documentation for all aspects of the system here, but beyond the basics feel free to pick and choose the topics that interest you.  Some people might want to focus on synthesizing new sounds from scratch, while for others it might be more interesting to focus on live-coding or generating musical scores on the fly.
 
+If you see any errors/issues/omission, please feel free to fix/add things - we'll love you forever.
 
-* [[Installing Overtone on OS X]]
-* [[Installing Overtone on Linux]]
-* [[Installing Overtone on Windows]]
+### Contents
+
+#### Installation
+* [[Installing Overtone]]
+* [[Installing and Starting Jack]] (for Linux users)
+
+#### Connecting to a Server
 * [[Connecting to an external SuperCollider server]]
 
-[[Getting Started]]
+#### First steps
+* [Overtone Cheat Sheet](http://cloud.github.com/downloads/overtone/overtone/overtone-cheat-sheet.pdf)
+* [[Getting Started]]
 
-"Overtone Cheat Sheet":http://cloud.github.com/downloads/overtone/overtone/overtone-cheat-sheet.pdf
-
-Synthesis:
+#### Synthesis:
 * [[oscillators]]
 * [[filters]]
 * [[delays]]
 * [[envelopes and controls]]
 * [[multi-channel expansion, stereo and panning]]
 
-Instruments and I/O:
+#### Instruments and I/O:
 * [[buffers and audio files]]
 * [[midi]]
 * [[recording]]
 
-Making music:
+#### Making music:
 * [[metronome and sequencing]]
 * [[chords and scales]]
 * [[arpeggiators and note generators]]
 * [[live-coding]]
 
-In progress:
+#### In progress:
 * [[sessions and instruments]]
 
-Development:
+#### Development:
 * [[Comparing sclang and Overtone synthdefs]]
