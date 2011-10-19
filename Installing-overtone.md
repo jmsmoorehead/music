@@ -82,4 +82,4 @@ Head over to the [SuperCollider download site](http://supercollider.sourceforge.
 
 ### What next?
 
-Familiarise yourself with the process of [[Starting a REPL]] and [[Booting scsynth]] then head over to [[Getting Started]] to learn how to make some crazy sounds.
+Familiarise yourself with the process of [[Starting a REPL]] and [[Connecting scsynth]] then head over to [[Getting Started]] to learn how to make some crazy sounds.
