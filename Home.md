@@ -1,6 +1,6 @@
 ## Welcome to Project Overtone!
 
-Our goal is to create a top notch live-coding environment and audio collaboration platform that's free for everyone to download, hack on and make crazy-cool sounds either individually or in groups. We've come a long way towards achieving this vision and hope you'll join in and help take us even further...
+Our goal is to create a top notch live-coding environment and audio collaboration platform that's free for everyone to download, hack on and make crazy-cool sounds either individually or in groups. We've come a long way towards achieving this vision and hope you'll join in and help take things even further...
 
 ### Technical Summary
 Overtone is a musical programming library written in [Clojure](http://clojure.org) which uses the [SuperCollider](http://supercollider.sourceforge.net/) audio engine and synthesis server under the covers. We're essentially marrying an awesome live-synthesis server with an insanely cool state-of-the-art lisp to create a glorious union that only the Gods can dream about. Seriously though, we're building on existing and proven open source technologies to create something we're truly excited about.
