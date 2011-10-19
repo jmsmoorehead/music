@@ -6,17 +6,26 @@ You'll know when you've entered a REPL session because the terminal prompt will 
 
 ### Firing up a REPL
 
-Exactly how to do this depends on which dependency management tool you used: [cake](http://clojure-cake.org/), [leiningen](http://github.com/technomancy/leiningen) or [maven](http://maven.apache.org/). All instructions require you to have the working directory of your terminal set to your project directory (i.e. `tutorial`).
+Exactly how to do this depends on which dependency management tool you used: [cake](http://clojure-cake.org/), [leiningen](http://github.com/technomancy/leiningen) or [maven](http://maven.apache.org/). All instructions require you to have the working directory of your terminal set to your project directory (i.e. `tutorial`). Once you see the `user=>` prompt, try typing the Clojure form `(+ 1 2)` to evaluate and return the answer (`3`). This is the REPL in full action:
+
+* READ - Clojure reads the form `(+ 1 2)` as text
+* EVALUATE - Clojure does the sum `1 + 2` and resolves it to `3`
+* PRINT - Clojure then prints the answer out to the screen
+* LOOP - Clojure writes the prompt `user=>` again and patiently waits for another command to read.
 
 #### Cake
 ```sh
 $ cake repl
+user=>(+ 1 2)
+3
 user=>
 ```
 
 #### Lein
 ```sh
 $ lein repl
+user=>(+ 1 2)
+3
 user=>
 ```
 
