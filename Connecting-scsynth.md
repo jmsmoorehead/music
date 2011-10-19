@@ -13,7 +13,7 @@ Note - the internal server is not currently supported for all architecture/opera
 Let's summarise that:
 
 * Internal Server
-  - Pros - Using the scope to visualise audio and buffers. Fast retrieval of audio buffers. Super simple to use.
+  - Pros - Enables using the scope to visualise audio and buffers. Fast retrieval of audio buffers. Super simple to use.
   - Cons - Crashes whole JVM when scsynth crashes, doesn't work everywhere and doesn't allow for multiple clients to connect to the same server (although you can coordinate external systems through Overtone itself)
 * External Server
   - Pros - More robust setup. Allows for multiple clients to be connected to the same server.
