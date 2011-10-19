@@ -82,5 +82,6 @@ Maven wizards - please complete this section.
 
 Head over to the [SuperCollider download site](http://supercollider.sourceforge.net/downloads/) and download and install the version appropriate for your operating system.
 
+### What next?
 
-
+Head over to [[Getting Started]] to learn how to fire up a REPL, boot scsynth and make some crazy sounds.
