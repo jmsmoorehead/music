@@ -8,7 +8,7 @@ Overtone is a musical programming library written in [Clojure](http://clojure.or
 ### About this Documentation
 We will try to maintain documentation for all aspects of the system here, but beyond the basics feel free to pick and choose the topics that interest you.  Some people might want to focus on synthesizing new sounds from scratch, while for others it might be more interesting to focus on live-coding or generating musical scores on the fly.
 
-If you see any errors/issues/omission, please feel free to fix/add things - we'll love you forever.
+If you see any errors/issues/omissions, please feel free to fix/add things - we'll love you forever.
 
 ### Contents
 
