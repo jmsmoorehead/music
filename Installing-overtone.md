@@ -9,9 +9,9 @@ Essentially, installation consists of the following steps:
 
 ### OS-specific setup
 
-* Linux [[Installing and Starting Jack]]
-* Windows - Watch this space
-* OS X - No extra steps necessary
+* __Linux__ - [[Installing and Starting Jack]]
+* __Windows__ - Watch this space
+* __OS X__ - No extra steps necessary
 
 ### Creating a Project Directory & Fetching Dependencies
 
@@ -80,7 +80,7 @@ Maven wizards - please complete this section.
 
 ### Downloading SuperCollider (for external servers only)
 
-Head over to the [SuperCollider download site](http://supercollider.sourceforge.net/downloads/) and download the version appropriate for your operating system.
+Head over to the [SuperCollider download site](http://supercollider.sourceforge.net/downloads/) and download and install the version appropriate for your operating system.
 
 
 
