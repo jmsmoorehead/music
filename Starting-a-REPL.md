@@ -13,6 +13,8 @@ Exactly how to do this depends on which dependency management tool you used: [ca
 * PRINT - Clojure then prints the answer out to the screen
 * LOOP - Clojure writes the prompt `user=>` again and patiently waits for another command to read.
 
+Later on we'll use this exact process to make music rather than doing basic sums...
+
 #### Cake
 ```sh
 $ cake repl
