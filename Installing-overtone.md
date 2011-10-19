@@ -6,25 +6,16 @@ Essentially, installation consists of the following steps:
 * Create a new directory for your audio project
 * Download the appropriate dependencies
 * Download and install SuperCollider (if you wish to use an external server)
-* Start a REPL
-* Boot or connect to a SuperCollider server
-* Start hacking music!
 
 ### OS-specific setup
 
-#### Linux
-* [[Installing and Starting Jack]]
-
-#### Windows
-Watch this space
-
-#### OS X
-No extra steps necessary
-
+* Linux [[Installing and Starting Jack]]
+* Windows - Watch this space
+* OS X - No extra steps necessary
 
 ### Creating a Project Directory & Fetching Dependencies
 
-__Note - if you wish to specify Clojure in your dependencies ensure that it is at least version `1.3.0`__
+_Note - if you wish to specify Clojure in your dependencies ensure that it is at least version `1.3.0`_
 
 #### Cake
 If you wish to use [cake](http://clojure-cake.org/):
@@ -45,6 +36,7 @@ Pull in the dependencies
 ```sh
 $ cd tutorial
 $ cake deps
+```
 
 #### Leiningen
 If you wish to use [leiningen](http://github.com/technomancy/leiningen)
@@ -65,7 +57,7 @@ Pull in the dependencies
 ```sh
 $ cd tutorial
 $ lein deps
-
+```
 #### Maven
 If you wish to use [Maven](http://maven.apache.org/):
 
@@ -83,4 +75,12 @@ Create a new file called `pom.xml` within the `tutorial` directory  with the fol
   <version>0.5.0</version>
 </dependency>
 ```
+
 Maven wizards - please complete this section.
+
+### Downloading SuperCollider (for external servers only)
+
+Head over to the [SuperCollider download site](http://supercollider.sourceforge.net/downloads/) and download the version appropriate for your operating system.
+
+
+
