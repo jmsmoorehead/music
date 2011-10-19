@@ -37,6 +37,7 @@ $ cd tutorial
 $ cake deps
 ```
 
+-------------
 #### Leiningen
 Create a new project
 ```sh
@@ -55,6 +56,8 @@ Pull in the dependencies
 $ cd tutorial
 $ lein deps
 ```
+
+-------------
 #### Maven
 Create a new directory for your project:
 
