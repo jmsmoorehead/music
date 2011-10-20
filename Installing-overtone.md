@@ -1,4 +1,4 @@
-Installing Overtone can be trivia or complex depending on your previous experience with Clojure projects, desire to use an external SuperCollider server and target OS. Here we'll walk you through all the steps assuming you have little or no prior Clojure knowledge.
+Installing Overtone can be trivial or complex depending on your previous experience with Clojure projects, desire to use an external SuperCollider server and target OS. Here we'll walk you through all the steps assuming you have little or no prior Clojure knowledge.
 
 Essentially, installation consists of the following steps:
 
