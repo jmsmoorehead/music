@@ -40,6 +40,10 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 * [[arpeggiators and note generators]]
 * [[live-coding]]
 
+#### Interacting with External Devices:
+* [[Monome]]
+* [[TouchOSC]]
+
 #### In progress:
 * [[sessions and instruments]]
 
