@@ -1,7 +1,7 @@
 For those intrepid live-coding adventurers that are looking for that more immersive connection with your Overtone musical processes TouchOSC is an excellent tool to play with:
 
-http://hexler.net/software/touchosc
-http://hexler.net/software/touchosc-android
+* http://hexler.net/software/touchosc
+* http://hexler.net/software/touchosc-android
 
 It's super easy to use it to control and trigger synths and other functionality you might build on top of Overtone and it's an excellent way to start playing around and exploring with parameters whilst you're just starting and finding your way around the vast library of ugens.
 
