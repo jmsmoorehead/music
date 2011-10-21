@@ -31,11 +31,11 @@ You'll either need to know the network address of the machine running Overtone, 
 
 Fire up TouchOSC, and head to the preference pane. It should look something like this:
 
-![TouchOSC Preference Pane](http://cloud.github.com/downloads/overtone/overtone/touchosc-prefs.png)
+![TouchOSC Preference Pane](https://github.com/downloads/overtone/overtone/touchosc-prefs.png)
 
 Head to the OSC Connections sub-pane (at the top of the Connections options in the above image). This should looks as follows (assuming you chose to turn zero-conf on):
 
-![TouchOSC OSC Connection Preference Pane](http://cloud.github.com/downloads/overtone/overtone/touchosc-osc-prefs.png)
+![TouchOSC OSC Connection Preference Pane](https://github.com/downloads/overtone/overtone/touchosc-osc-prefs.png)
 
 Ensure sure that the OSC Connection is enabled (if necessary, set the on/off slider in the top right to on). Now, notice how our server we named `osc-clj` is listed as one of the "Found Hosts". All we need to do is tap that and TouchOSC will auto-configure our settings. Head back to Overtone and enter `(zero-conf-off)` to stop broadcasting your connection settings. 
 
@@ -51,7 +51,7 @@ Now, so far so good - but how do we know that the configuration worked? Let's re
 
 Now, over in TouchOSC, choose a layout and navigate to it (by pressing "Done" in the main preference pane). You should see something like this:
 
-![Example TouchOSC Interface](http://cloud.github.com/downloads/overtone/overtone/touchosc-interface.png)
+![Example TouchOSC Interface](https://github.com/downloads/overtone/overtone/touchosc-interface.png)
 
 Now hammer on buttons/sliders etc. and be delighted with a streaming set of debug messages within Overtone. Note, you may have to be tailing a log file to view this output depending on your setup as it will be printed from a non-REPL thread. For example, if you use cake you should `tail -f PROJECT-ROOT/.cake/cake.log`.
 
