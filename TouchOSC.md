@@ -100,7 +100,7 @@ Let's now override our boring `"/1/fader6"` handler which just prints out the in
 (osc-handle server "/1/fader6" (fn [msg] (control-foo (first (:args msg)))))
 ```
 
-Now, all we need to do is to trigger foo:
+Now, all we need to do is to trigger `foo`:
 
 ```clj
 (foo)
