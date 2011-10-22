@@ -4,7 +4,7 @@ https://github.com/overtone/overtone/issues?sort=created&direction=desc&state=op
 
 ### What to Include
 
-The information you give us can be crucial to helping us duplicate the bug on our machines. Essentially, we'd like a description of the "shortest path" from using `overtone.live` or `overtone.core` to seeing the crash. The shorter the description the better.  Something like: 
+The information you give us can be crucial to helping us duplicate the bug on our machines. Essentially, we'd like a description of the "shortest path" from using `overtone.live` or `overtone.core` to seeing the crash. Sometimes the design of a synth may cause a crash - if you believe that's the case, be sure to include that. The shorter the description the better.  Something like: 
 
 Boot the internal server:
 
