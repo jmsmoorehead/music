@@ -1,5 +1,7 @@
 Sometimes things burn and crash or just don't do what you expect. It's the way of the world. However, things don't always have to be that way! If you find you have issues with Overtone then please file a GitHub Issue so that we can look into it and hopefully stop it from happening again.
 
+https://github.com/overtone/overtone/issues?sort=created&direction=desc&state=open
+
 ### What to Include
 
 The information you give us can be crucial to helping us duplicate the bug on our machines. Essentially, we'd like a description of the "shortest path" from using `overtone.live` or `overtone.core` to seeing the crash. The shorter the description the better.  Something like: 
