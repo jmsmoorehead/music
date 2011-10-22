@@ -28,7 +28,7 @@ and BOOM!
 
 ### External Devices
 
-If your error occurs whilst using external devices through an OSC/MIDI interface, try to reproduce the error without the external device or consider sending bug reports to the appropriate library GitHub pages.
+If your error occurs whilst using external devices through an OSC/MIDI interface, try to reproduce the error without the external device or consider sending bug reports to the appropriate library's GitHub Issue page.
 
 ### Environment Information
 This extra information may be useful with particularly nasty bugs:
