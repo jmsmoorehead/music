@@ -19,7 +19,7 @@ Define the following synth:
 Trigger foo:
 
 ```clj
-(foo)```
+(foo)
 ```
 
 and BOOM! If your error occurs whilst using external devices through an OSC/MIDI interface, try to reproduce the error without the external device or consider sending bug reports to the appropriate library GitHub pages.
