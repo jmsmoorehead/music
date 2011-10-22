@@ -48,4 +48,5 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 * [[sessions and instruments]]
 
 #### Development:
+* [[Bug Reports]]
 * [[Comparing sclang and Overtone synthdefs]]
