@@ -35,7 +35,9 @@ In order to connect to an external server we need to do two separate steps. Firs
 
     user=>(use 'overtone.core)
 
-We now have access to all of Overtone's functionality, only most of it is useless without a synthesis engine to actually make sound. To connect to one we need to either connect to an already running server or we need to boot one ourselves and then connect to it. Overtone makes both of these options simple, however you need to ensure you've already manually installed SuperCollider. If not, head here: http://supercollider.sourceforge.net/ and install a version for your architecture. If you're running Linux, make sure that the `scsynth` executable is in your `PATH`.
+We now have access to all of Overtone's functionality, only most of it is useless without a synthesis engine to actually make sound. To connect to one we need to either connect to an already running server or we need to boot one ourselves and then connect to it. Overtone makes both of these options simple, however you need to ensure you've already manually installed SuperCollider. If not, head here: http://supercollider.sourceforge.net/ and install a version for your architecture. 
+
+**If you're running Linux, make sure that the `scsynth` executable is in your `PATH`.**
 
 As mentioned, before you connect you need to choose whether you want to boot a new server or connect to an existing server.
 
