@@ -39,8 +39,8 @@ and then modifying the inst to output to buffer b using the record-buf ugen:
                (* 0.1 (square (* 1.3 freq))) 
                (* 0.1 (triangle (* 2.8 freq))) 
                (* 0.1 (square (* 4.2 freq)))) 
-        env (env-gen (perc attack decay) :action :free)] 
-    (record-buf (* velocity src env) b :action  2 :loop 0))) 
+        env (env-gen (perc attack decay) :action FREE)] 
+    (record-buf (* velocity src env) b :action FREE :loop 0))) 
 ```
 
 Trigger the inst: 
