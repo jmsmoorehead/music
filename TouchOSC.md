@@ -41,6 +41,8 @@ Ensure sure that the OSC Connection is enabled (if necessary, set the on/off sli
 
 If you didn't opt to use zero-conf, simply manually enter the port address of the server `44100` and your local IP address in this pane.
 
+If you are using zero-conf, and you find that the remote server's IP address is shown in TouchOSC as a loopback address (eg 127.0.1.1) you may need to change your computer's network configuration.  If there is a line in `/etc/hosts` mapping your hostname to a loopback address you should remove it.  You can see the effect of this on the REPL if you run `(java.net.InetAddress/getLocalHost)`.  This problem is known to affect recent releases of Ubuntu.
+
 ### Test Your Connection
 
 Now, so far so good - but how do we know that the configuration worked? Let's register a listener on the OSC server which will run a function for each incoming OSC message and get it to just print out the contents of each message. This is pretty simple:
