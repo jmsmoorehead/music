@@ -18,3 +18,14 @@ While loading samples is nice, most of the time you'll want to load a sample and
 (flute)
 ```
 
+If you want to load a sample and use it as a signal-generator in a more complex synth, then use @play-buf@ for example:
+
+```clj
+(def sample-buf (load-sample "36.wav"))
+(defsynth reverb-on-left []
+  (let [dry (play-buf 1 sample-buf)
+	wet (free-verb dry 1)]
+    (out 0 [wet dry])))
+
+(reverb-on-left)
+```
