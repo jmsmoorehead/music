@@ -1,3 +1,15 @@
+## Playing samples
+
+Most of the time you'll want to load a sample and return a function that can be used to trigger the sample.  This can be done with @(sample <path>)@.
+
+```clj
+(def flute (sample "/home/rosejn/studio/samples/flutes/flutey-echo-intro-blast.wav"))
+
+(flute)
+```
+
+## Loading a sample into a buffer
+
 You can load a wav file into an audio buffer using @(load-sample <path>)@:
 
 ```clj
@@ -10,13 +22,7 @@ Buffers are in-memory storage spots for audio files, and they can be either read
 (scope :buf flute-buf)
 ```
 
-While loading samples is nice, most of the time you'll want to load a sample and return a function that can be used to trigger the sample.  This can be done with @(sample <path>)@.
-
-```clj
-(def flute (sample "/home/rosejn/studio/samples/flutes/flutey-echo-intro-blast.wav"))
-
-(flute)
-```
+### Playing a sample from a buffer
 
 If you want to load a sample and use it as a signal-generator in a more complex synth, then use @play-buf@ for example:
 
