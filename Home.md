@@ -28,6 +28,7 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 * [[delays]]
 * [[envelopes and controls]]
 * [[multi-channel expansion, stereo and panning]]
+* [[fx chains]]
 
 #### Instruments and I/O:
 * [[buffers and audio files]]
