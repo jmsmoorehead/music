@@ -40,6 +40,10 @@ Now compile and install:
 
 `cd sc3-plugins`
 
+`git submodule init`
+
+`git submodule update`
+
 `mkdir cmake_build`
 
 `cd cmake_build`
