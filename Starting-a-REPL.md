@@ -18,7 +18,7 @@ Later on we'll use this exact process to make music rather than doing basic sums
 #### Cake
 ```sh
 $ cake repl
-user=>(+ 1 2)
+user=> (+ 1 2)
 3
 user=>
 ```
@@ -26,13 +26,19 @@ user=>
 #### Lein
 ```sh
 $ lein repl
-user=>(+ 1 2)
+user=> (+ 1 2)
 3
 user=>
 ```
 
 #### Maven
-Maven wizards - please fill me.
+```sh
+$ mvn clojure:repl
+user=> (+ 1 2)
+3
+```
+
+The basic command-line REPL via `clojure-maven-plugin` does not provide much of any "creature comforts" (e.g. no readline support, no command history), so you may want to explore using a better REPL via [swank](https://github.com/technomancy/swank-clojure) (if you're an emacs fan) or [nREPL](http://github.com/clojure/tools.nrepl) (if you prefer Eclipse / [Counterclockwise](http://code.google.com/p/counterclockwise/)).
 
 ### What next?
 
