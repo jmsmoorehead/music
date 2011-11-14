@@ -66,16 +66,54 @@ Create a new directory for your project:
 $ mkdir tutorial
 ```
 
-Create a new file called `pom.xml` within the `tutorial` directory  with the following contents:
+Create a new file called `pom.xml` within the `tutorial` directory with the following contents:
 ```xml
-<dependency>
-  <groupId>overtone</groupId>
-  <artifactId>overtone</artifactId>
-  <version>0.5.0</version>
-</dependency>
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.yourname</groupId>
+  <artifactId>overtone-tutorial</artifactId>
+  <version>0.0.1</version>
+  <name>raposo</name>
+  <dependencies>
+    <dependency>
+      <groupId>overtone</groupId>
+      <artifactId>overtone</artifactId>
+      <version>0.5.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>1.3.0</version>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>clojars</id>
+      <url>http://clojars.org/repo</url>
+    </repository>
+  </repositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.theoryinpractise</groupId>
+        <artifactId>clojure-maven-plugin</artifactId>
+        <version>1.3.7</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
 ```
 
-Maven wizards - please complete this section.
+Dependencies will be obtained automatically on the first build.
 
 ### Downloading SuperCollider (for external servers only)
 
