@@ -29,7 +29,8 @@ Add Overtone to the dependency list in `tutorial/project.clj`:
 
 ```clj
 (defproject tutorial "1.0"
-  :dependencies [[overtone "0.5.0"]])
+  :dependencies [[org.clojure/clojure "1.3.0"]
+                 [overtone "0.5.0"]])
 ```
 
 Pull in the dependencies
@@ -49,7 +50,8 @@ Add Overtone to the dependency list in `tutorial/project.clj`:
 
 ```clj
 (defproject tutorial "1.0"
-  :dependencies [[overtone "0.5.0"]])
+  :dependencies [[org.clojure/clojure "1.3.0"]
+                 [overtone "0.5.0"]])
 ```
 
 Pull in the dependencies
