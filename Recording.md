@@ -1,3 +1,13 @@
+## Overtone 0.6.0
+
+```clj
+(start-recording "~/Desktop/foo.wav")
+;;make some noise...
+(demo (pan2 (sin-osc)))
+(stop-recording)
+```
+
+## Overtone < 0.6.0
 Say you wish to create a wav file containing a recording of the following inst being played:
 
 ```clj
