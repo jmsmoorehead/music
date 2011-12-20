@@ -1,10 +1,10 @@
 ## Overtone 0.6.0
 
 ```clj
-(start-recording "~/Desktop/foo.wav")
+(recording-start "~/Desktop/foo.wav")
 ;;make some noise...
 (demo (pan2 (sin-osc)))
-(stop-recording)
+(recording-stop)
 ```
 
 ## Overtone < 0.6.0
