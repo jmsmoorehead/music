@@ -50,4 +50,6 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 
 #### Development:
 * [[Bug Reports]]
+* [[Hacking Overtone]]
 * [[Comparing sclang and Overtone synthdefs]]
+
