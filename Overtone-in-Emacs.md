@@ -25,6 +25,7 @@ $ mv live-coding-emacs/ .emacs.d/
 Launch emacs and type `M-x slime-connect <RET> <RET> <RET>`
 
 ##Hello World!
+
 ```clj
 user> (use 'overtone.live)
           _____                 __
