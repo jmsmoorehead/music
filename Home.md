@@ -17,6 +17,7 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 * [[Starting a REPL]]
 * [[Connecting scsynth]]
 * [[Installing and Starting Jack]] (for Linux users)
+* [[Overtone on the Edge!]]
 
 #### First steps
 * [Overtone Cheat Sheet](http://cloud.github.com/downloads/overtone/overtone/overtone-cheat-sheet.pdf)
