@@ -123,4 +123,4 @@ Head over to the [SuperCollider download site](http://supercollider.sourceforge.
 
 ### What next?
 
-Familiarise yourself with the process of [[Starting a REPL]] and [[Connecting scsynth]] then head over to [[Getting Started]] to learn how to make some crazy sounds.
+Familiarise yourself with the process of [[Starting a REPL]] and [[Connecting scsynth]] then head over to [[Getting Started]] to learn how to make some crazy sounds. If you want to run the latest and greatest development version of Overtone have look at [[Overtone on the Edge!]]
