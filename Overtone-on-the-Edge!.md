@@ -25,7 +25,7 @@ $ lein deps
 ```
 
 #REPL Quick Start
-The quickest way to get started is to launch a clojure repl the overtone project directory using lein.
+The quickest way to get started is to launch a clojure repl in the overtone project directory using lein.
 ```sh
 $ lein repl
 ```
