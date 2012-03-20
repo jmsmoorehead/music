@@ -42,6 +42,7 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 * [[chords and scales]]
 * [[arpeggiators and note generators]]
 * [[live-coding]]
+* [[swing]]
 
 #### Interacting with External Devices:
 * [[Monome]]
