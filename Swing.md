@@ -24,7 +24,7 @@ Why yes, yes it is:
   (at (metro beat) (o-hat))
   (at (metro (inc beat)) (c-hat))
   (at (metro (+ 1.65 beat)) (c-hat))
-  (apply-at (metro (+ 2 beat)) #'player (+ 2 beat) []))
+  (apply-at (metro (+ 2 beat)) #'swinger (+ 2 beat) []))
 
 
 (swinger (metro))
