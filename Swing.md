@@ -4,7 +4,8 @@ Someone asked at the Clojure West Unjam whether it was possible to have a swing 
 
 Why yes, yes it is:
 
-`(definst c-hat [amp 0.8 t 0.04]
+```clj
+(definst c-hat [amp 0.8 t 0.04]
   (let [env (env-gen (perc 0.001 t) 1 1 0 1 FREE)
         noise (white-noise)
         sqr (* (env-gen (perc 0.01 0.04)) (pulse 880 0.2))
@@ -27,4 +28,4 @@ Why yes, yes it is:
 
 
 (swinger (metro))
-`clojure
+```
