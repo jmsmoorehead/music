@@ -27,6 +27,8 @@ This is super easy. We simply issue the following statement to our Clojure REPL:
 
     user=>(use 'overtone.live)
 
+NB if you're using OSX + lein and get `java.lang.Exception: Too many arguments to def (defaults.clj:4)` try specifying Clojure 1.3.0 instead of 1.2.1 and removing the old Clojure jar from the lib folder.
+
 Clojure will pull in all of Overtone's musical goodness, then diligently fire up an internal server process and connect to it for us. When the prompt returns, we're ready to go.
 
 ### Connecting to an External Server
