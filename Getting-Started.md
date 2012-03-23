@@ -33,7 +33,7 @@ descriptions of many ugens from the SC documentation.  Also, they all have doc
 strings in Overtone.
 
 ```
-> (doc saw)
+> (odoc saw)
 -------------------------
 overtone.live/saw
 ([freq])
