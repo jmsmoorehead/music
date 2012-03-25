@@ -8,7 +8,8 @@ You'll need to get the jack audio daemon running, and we recommend qjackctl to f
 
 You can create a `.jackdrc` file with this command to automatically start the jack server on boot, or you will need to run it manually to start the Jack audio server:
 ```sh
-$ jackd -r -d alsa -r 44100 ; or use qjackctl for a gui
+$ jackd -r -d alsa -r 44100
 ```
+An alternative is to use the qjackctl gui.
 
-Future versions will also support ALSA audio.
+We hope to support ALSA audio in future versions.
