@@ -15,29 +15,9 @@ Essentially, installation consists of the following steps:
 
 ### Creating a Project Directory & Fetching Dependencies
 
-Here we detail options for using either [cake](http://clojure-cake.org/), [leiningen](http://github.com/technomancy/leiningen) or [maven](http://maven.apache.org/) to help you manage and fetch Overtone's dependencies.
+Here we detail options for using either [leiningen](http://github.com/technomancy/leiningen) or [maven](http://maven.apache.org/) to help you manage and fetch Overtone's dependencies.
 
 __Note - if you wish to specify Clojure in your dependencies ensure that it is at least version `1.3.0`__
-
-#### Cake
-Create a new project
-```sh
-$ cake new tutorial
-```
-
-Add Overtone to the dependency list in `tutorial/project.clj`:
-
-```clj
-(defproject tutorial "1.0"
-  :dependencies [[org.clojure/clojure "1.3.0"]
-                 [overtone "0.6.0"]])
-```
-
-Pull in the dependencies
-```sh
-$ cd tutorial
-$ cake deps
-```
 
 -------------
 #### Leiningen
