@@ -56,7 +56,7 @@ Trigger the inst:
 and then issued a buffer-save command to save to a file called "bong.wav" in the directory of the current project: 
 
 ```clj
-(buffer-save b "bong.wav") 
+(buffer-save b "~/Desktop/bong.wav") 
 ```
 
 your file should be in the root directory of your project for your listening pleasure :-)
