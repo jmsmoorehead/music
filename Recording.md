@@ -18,10 +18,7 @@ Say you wish to create a wav file containing a recording of the following inst b
                (* 0.4 (sin-osc (* 4.9 freq))) 
                (* 0.3 (sin-osc (* 7.1 freq))) 
                (* 0.2 (sin-osc (* 8.9 freq))) 
-               (* 0.1 (triangle (* 11.1 freq))) 
-               (* 0.1 (triangle (* 2.4 freq))) 
                (* 0.1 (square (* 1.3 freq))) 
-               (* 0.1 (triangle (* 2.8 freq))) 
                (* 0.1 (square (* 4.2 freq)))) 
         env (env-gen (perc attack decay) :action FREE)] 
     (* velocity src env))) 
