@@ -53,10 +53,8 @@ Trigger the inst:
     (bong) 
 ```
 
-and then issued a buffer-save command to save to a file called "bong.wav" on your desktop:
+and then issue a buffer-save command to save to a file called "bong.wav" on your desktop:
 
 ```clj
 (buffer-save b "~/Desktop/bong.wav") 
 ```
-
-your file should be in the root directory of your project for your listening pleasure :-)
