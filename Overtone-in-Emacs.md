@@ -4,7 +4,7 @@ For the best live coding experience in emacs, you'll wan't to install...
 * live-coding-emacs
 
 ##swank-clojure
-See (https://github.com/technomancy/swank-clojure).
+See ([https://github.com/technomancy/swank-clojure](https://github.com/technomancy/swank-clojure)).
 
 ```sh
 $ lein plugin install swank-clojure 1.3.4
@@ -13,7 +13,7 @@ $ lein swank
 ```
 
 ##live-coding-emacs config
-See (https://github.com/overtone/live-coding-emacs).
+See ([https://github.com/overtone/live-coding-emacs](https://github.com/overtone/live-coding-emacs)).
 
 ```sh
 $ cd ~/
