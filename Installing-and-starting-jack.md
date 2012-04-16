@@ -10,6 +10,12 @@ You can create a `.jackdrc` file with this command to automatically start the ja
 ```sh
 jackd -r -d alsa -r 44100
 ```
+
+If you get errors from the above try:
+```sh
+jackd -r -d alsa -r 44100 -P
+```
+
 An alternative is to use the qjackctl gui.
 
 We hope to support ALSA audio in future versions.
