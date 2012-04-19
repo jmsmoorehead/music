@@ -22,6 +22,7 @@ __Note - if you wish to specify Clojure in your dependencies ensure that it is a
 -------------
 #### Leiningen
 Create a new project
+
 ```sh
 $ lein new tutorial
 ```
@@ -29,14 +30,13 @@ $ lein new tutorial
 Add Overtone to the dependency list in `tutorial/project.clj`:
 
 ```clj
-
-    (defproject tutorial "1.0"
-    :dependencies [ [org.clojure/clojure "1.3.0"]
-    [overtone "0.6.0"] ])
-
+(defproject tutorial "1.0"
+  :dependencies [ [org.clojure/clojure "1.3.0"]
+                  [overtone "0.6.0"] ])
 ```
 
 Pull in the dependencies
+
 ```sh
 $ cd tutorial
 $ lein deps
@@ -51,6 +51,7 @@ $ mkdir tutorial
 ```
 
 Create a new file called `pom.xml` within the `tutorial` directory with the following contents:
+
 ```xml
 <?xml version="1.0"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
