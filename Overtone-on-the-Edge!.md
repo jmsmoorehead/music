@@ -25,4 +25,4 @@ user> (use 'overtone.live)
 user> (demo (sin-osc))
 ```
 
-For a better experience try [Overtone in emacs](Overtone In Emacs).
+For a better experience try [[Overtone in emacs]] or [[Overtone in vim]].
