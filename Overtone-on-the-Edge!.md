@@ -1,22 +1,7 @@
 If you'd like to be running the latest development version of Overtone, here's what you need to do.
 This guide assumes that you are using lein, but cake works just fine too.
 
-#Installation
-##Install Seesaw
-Overtone uses Seesaw to make working with Swing in Clojure more fun! you'll need the latest version of Seesaw to take advantage of Overtone's new gui widgets.
-
-See (https://github.com/daveray/seesaw).
-
-```sh
-$ git clone https://github.com/daveray/seesaw.git
-$ cd seesaw
-$ lein deps
-$ lein install
-$ cd ..
-```
-
-##Install Overtone
-Get the latest code from github.
+##Get the latest code from github.
 
 ```sh
 $ git clone git://github.com/overtone/overtone.git
@@ -24,18 +9,20 @@ $ cd overtone
 $ lein deps
 ```
 
-#REPL Quick Start
-The quickest way to get started is to launch a clojure repl in the overtone project directory using lein.
+##Launch a REPL
+The quickest way to get started is to launch a clojure repl using lein. 
+In the overtone project directory....
+
 ```sh
 $ lein repl
 ```
 
 Then make some noise :)
+
 ```clj
 user> (use 'overtone.live)
    ...wait a bit...
 user> (demo (sin-osc))
 ```
 
-#Resources
-* [Overtone in emacs](Overtone In Emacs)
+For a better experience try [Overtone in emacs](Overtone In Emacs).
