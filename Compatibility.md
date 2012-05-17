@@ -1,3 +1,5 @@
+Please fill this in if you have managed to get a specific combination working.
+
 External Servers:
 
 64 bit OS X:
