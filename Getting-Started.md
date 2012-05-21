@@ -82,7 +82,7 @@ signal is represented as a continuous stream of floating point values between -1
 and 1, so by multiplying by 0.3 we are just lowering the amplitude of this
 signal, adjusting the volume.
 
-We can change paramaters of the running synth on the fly with `ctl`
+We can change parameters of the running synth on the fly with `ctl`
 
 ```clj
 > (definst quux [freq 440] (* 0.3 (saw freq)))
