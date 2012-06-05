@@ -1,0 +1,1 @@
+A great way to get started with Overtone and Clojure in vim is Dave Ray's [vimclojure-easy](https://github.com/daveray/vimclojure-easy).
