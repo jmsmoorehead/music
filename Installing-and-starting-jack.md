@@ -19,3 +19,7 @@ jackd -r -d alsa -r 44100 -P
 An alternative is to use the qjackctl gui.
 
 We hope to support ALSA audio in future versions.
+
+## Note for Fedora Users
+
+It has been reported that the command `jack_lsp` is required and may be obtained by installing the fedora package `jack-audio-connection-kit-example-clients` 
