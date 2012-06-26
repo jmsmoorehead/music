@@ -32,7 +32,7 @@ Add Overtone to the dependency list in `tutorial/project.clj`:
 ```clj
 (defproject tutorial "1.0"
   :dependencies [ [org.clojure/clojure "1.3.0"]
-                  [overtone "0.6.0"] ])
+                  [overtone "0.7.0"] ])
 ```
 
 Pull in the dependencies
@@ -65,7 +65,7 @@ Create a new file called `pom.xml` within the `tutorial` directory with the foll
     <dependency>
       <groupId>overtone</groupId>
       <artifactId>overtone</artifactId>
-      <version>0.6.0</version>
+      <version>0.7.0</version>
     </dependency>
     <dependency>
       <groupId>org.clojure</groupId>
