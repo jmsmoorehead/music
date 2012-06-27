@@ -10,7 +10,7 @@ Essentially, installation consists of the following steps:
 ### OS-specific setup
 
 * __Linux__ - [[Installing and Starting Jack]]
-* __Windows__ - No extra steps necessary
+* __Windows__ - Install SuperCollider manually and follow the instructions for the external server
 * __OS X__ - No extra steps necessary
 
 ### Creating a Project Directory & Fetching Dependencies
