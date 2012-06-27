@@ -10,7 +10,7 @@ Essentially, installation consists of the following steps:
 ### OS-specific setup
 
 * __Linux__ - [[Installing and Starting Jack]]
-* __Windows__ - Watch this space
+* __Windows__ - No extra steps necessary
 * __OS X__ - No extra steps necessary
 
 ### Creating a Project Directory & Fetching Dependencies
