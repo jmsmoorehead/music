@@ -1,3 +1,48 @@
+## Using the event stream
+
+Overtone 0.7.1 automatically detects all connected MIDI devices on boot and registers the appropriate handlers for you. When you bash the keys on the keyboard, Overtone receives internal events in its event stream. To see them use:
+
+```clj
+(event-debug-on)
+```
+
+To stop:
+
+```clj
+(event-debug-off)
+```
+
+You should see that for each key press, there are two events. A general midi control change event:
+
+```clj
+[:midi :note-on]
+```
+
+and a device-specific event i.e.:
+
+```clj
+[:midi-device Evolution Electronics Ltd. Keystation 61e Keystation 61e :note-on]
+```
+
+For simplicity use the general event type:
+
+```clj
+(on-event [:midi :note-on]
+          (fn [e]
+            (let [note (:note e)
+                  vel  (:velocity e)]
+              (your-instr note vel)))
+          ::keyboard-handler)
+```
+
+The last argument is a keyword which can be used to refer to this handler, so you can later do:
+
+```clj
+(remove-handler ::keyboard-handler)
+```
+
+## Using midi-clj directly
+
 Overtone comes with the midi-clj library which provides a no nonsense interface to the built-in Java midi support.  Calling either `(midi-in)` or `(midi-out)` with no arguments will bring up a list of all available midi input or output devices.  After clicking on a device the function will return with a handler that can be used to communicate with the device.  Once you know the name of your midi device you can pass a search string that will then return the first matching device.  This grabs an Axiom66 usb-midi keyboard:
 
 ```clj
