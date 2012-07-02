@@ -21,9 +21,10 @@ See https://github.com/overtone/emacs-live#getting-started
 ### lein-swank
 
 Create a file called `~/.lein/profiles.clj` with the following contents:
-    
-    {:user {:plugins [[lein-swank "1.4.4"]]}}
 
+```clj
+{:user {:plugins [[lein-swank "1.4.4"]]}}
+```
 
 ### Pulling it all together
 
