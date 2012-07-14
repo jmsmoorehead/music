@@ -6,7 +6,7 @@ You'll know when you've entered a REPL session because the terminal prompt will 
 
 ### Firing up a REPL
 
-Exactly how to do this depends on which dependency management tool you used: [leiningen](http://github.com/technomancy/leiningen) or [maven](http://maven.apache.org/). All instructions require you to have the working directory of your terminal set to your project directory (i.e. `tutorial`). Once you see the `user=>` prompt, try typing the Clojure form `(+ 1 2)` and press return to evaluate and return the answer `3`. This is the REPL in full action:
+All instructions require you to have the working directory of your terminal set to your project directory (i.e. `tutorial`). Once you see the `user=>` prompt, try typing the Clojure form `(+ 1 2)` and press return to evaluate and return the answer `3`. This is the REPL in full action:
 
 * READ - Clojure reads the form `(+ 1 2)` as text
 * EVALUATE - Clojure does the sum `1 + 2` and resolves it to `3`
@@ -16,19 +16,12 @@ Exactly how to do this depends on which dependency management tool you used: [le
 Later on we'll use this exact process to make music rather than doing basic sums...
 
 
-#### Lein
+
 ```sh
 $ lein repl
 user=> (+ 1 2)
 3
 user=>
-```
-
-#### Maven
-```sh
-$ mvn clojure:repl
-user=> (+ 1 2)
-3
 ```
 
 The basic command-line REPL via `clojure-maven-plugin` does not provide much of any "creature comforts" (e.g. no readline support, no command history), so you may want to explore using a better REPL via [swank](https://github.com/technomancy/swank-clojure) (if you're an emacs fan) or [nREPL](http://github.com/clojure/tools.nrepl) (if you prefer Eclipse / [Counterclockwise](http://code.google.com/p/counterclockwise/)).
