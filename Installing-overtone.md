@@ -1,31 +1,29 @@
-Installing Overtone can be trivial or complex depending on your previous experience with Clojure projects, desire to use an external SuperCollider server and target OS. Here we'll walk you through all the steps assuming you have little or no prior Clojure knowledge.
+Installing Overtone is as simple as installing a standard Clojure library which consists of the following steps:
 
-Essentially, installation consists of the following steps:
+* Install leiningen
+* Create a new project
+* Pull in dependencies
 
-* Perform any necessary OS-specific setup
-* Create a new directory for your audio project
-* Download the appropriate dependencies
-* Download and install SuperCollider (if you wish to use an external server)
+### Install leiningen
 
-### OS-specific setup
+Head over here and follow the instructions: https://github.com/technomancy/leiningen/#installation
 
-* __Linux__ - [[Installing and Starting Jack]]
-* __Windows__ - Install SuperCollider manually (and follow the instructions for the external server that appear later on)
-* __OS X__ - No extra steps necessary
+You should be able to type `lein` on your console and see a list of options.
 
-### Creating a Project Directory & Fetching Dependencies
+### Create a new project
 
-These instructions assume that you have [leiningen](http://github.com/technomancy/leiningen) installed on your system. 
-
-__Note - if you wish to specify Clojure in your dependencies ensure that it is at least version `1.3.0`__
-
-Create a new project
+On your terminal, type the following:
 
 ```sh
 $ lein new tutorial
 ```
+This will create you a new project directory structure skeleton within which to place your music code.
 
-Add Overtone to the dependency list in `tutorial/project.clj`:
+### Pull in Dependencies
+
+Overtone relies on a number of external dependencies which must be available on your system. Luckily this doesn't mean lots of manual downloading as lein will handle all this for you. All you need to do is to tell lein that your project depends on Overtone, and lein will figure out the rest. When you created the `tutorial` project, lein created a file called `tutorial/project.clj`. This is the file you use to tell lein about the specifics of your project. In this case we only care about telling lein that Overtone is a dependency. THis is as simple as adding `[overtone "0.7.1"]` to the list of dependencies.
+
+Therefore, open up `tutorial/project.clj` and edit it to look as follows:
 
 ```clj
 (defproject tutorial "1.0"
@@ -33,16 +31,12 @@ Add Overtone to the dependency list in `tutorial/project.clj`:
                   [overtone "0.7.1"] ])
 ```
 
-Pull in the dependencies
+Now, to pull in the dependencies, you just need to run `lein deps` from within the project directory:
 
 ```sh
 $ cd tutorial
 $ lein deps
 ```
-
-### Downloading SuperCollider (for external servers only)
-
-Head over to the [SuperCollider download site](http://supercollider.sourceforge.net/downloads/) and download and install the version appropriate for your operating system.
 
 ### What next?
 
