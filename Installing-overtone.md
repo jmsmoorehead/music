@@ -19,8 +19,6 @@ These instructions assume that you have [leiningen](http://github.com/technomanc
 
 __Note - if you wish to specify Clojure in your dependencies ensure that it is at least version `1.3.0`__
 
--------------
-#### Leiningen
 Create a new project
 
 ```sh
