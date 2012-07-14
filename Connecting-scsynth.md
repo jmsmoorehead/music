@@ -4,9 +4,10 @@ At this point we assume that you have [[installed Overtone|Installing Overtone]]
 
 Clojure is sitting there waiting for your next command, silent and obediently. What shall we ask of it? Well, if we wish it to make our speakers sing out the glorious swelling flush of powerful angelic wings rushing by, we need to load up an Overtone environment and connect to an scsynth server. So, let's get cracking. However, before we get started, we need a quick chat about servers.
 
+
 ### The Difference Between External & Internal Servers
 
-Overtone supports both internal and external instances of the SuperCollider server (fondly referred to as scsynth - for SuperCollider Synth). The internal server is good for quick setup (there are no external dependencies to install and allows fast access to server buffers for transferring sound data and using the scopes). The external server requires a separate installation of SuperCollider itself but is more robust in that crashes in the server (through malformed synth designs etc.) don't also crash the JVM (which is the case for the internal server). It is also possible to connect multiple separate clients to an already running external scsynth instance.
+Overtone supports both internal and external instances of the SuperCollider server (fondly referred to as scsynth - for SuperCollider Synth). The internal server is good for quick setup (there are no external dependencies to install and allows fast access to server buffers for transferring sound data and using the scopes). The external server requires a separate installation of SuperCollider itself but is more robust in that crashes in the server (through malformed synth designs etc.) don't also crash the JVM (which is the case for the internal server). 
 
 Note - the internal server is not currently supported for all architecture/operating system combinations. However, the external server should work everywhere.
 
@@ -16,10 +17,14 @@ Let's summarise that:
   - Pros - Enables using the scope to visualise audio and buffers. Fast retrieval of audio buffers. Super simple to use.
   - Cons - Crashes whole JVM when scsynth crashes, doesn't work everywhere and doesn't allow for multiple clients to connect to the same server (although you can coordinate external systems through Overtone itself)
 * External Server
-  - Pros - More robust setup. Allows for multiple clients to be connected to the same server.
+  - Pros - More robust setup - works everywhere.
   - Cons  - No scope or fast audio buffer retrieval (although you still can access buffer data much more slowly)
 
-OK, let's discuss connecting to internal and external servers separately.
+### OS-specific setup
+
+* __Linux__ - [[Installing and Starting Jack]]
+* __Windows__ - No extra steps necessary.
+* __OS X__ - No extra steps necessary.
 
 ### Connecting to an Internal Server
 
