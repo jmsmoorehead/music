@@ -40,8 +40,6 @@ $ cd tutorial
 $ lein deps
 ```
 
-Dependencies will be obtained automatically on the first build.
-
 ### Downloading SuperCollider (for external servers only)
 
 Head over to the [SuperCollider download site](http://supercollider.sourceforge.net/downloads/) and download and install the version appropriate for your operating system.
