@@ -15,7 +15,7 @@ Essentially, installation consists of the following steps:
 
 ### Creating a Project Directory & Fetching Dependencies
 
-Here we detail options for using [leiningen](http://github.com/technomancy/leiningen)to help you manage and fetch Overtone's dependencies.
+These instructions assume that you have [leiningen](http://github.com/technomancy/leiningen) installed on your system. 
 
 __Note - if you wish to specify Clojure in your dependencies ensure that it is at least version `1.3.0`__
 
