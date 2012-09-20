@@ -13,7 +13,7 @@ See https://github.com/technomancy/leiningen/wiki/Upgrading
 ### Emacs Live
 See https://github.com/overtone/emacs-live#getting-started
 
-    bash <(curl -fsSL https://raw.github.com/overtone/emacs-live/master/installer/install-emacs-live.sh)
+    bash <(curl -fksSL https://raw.github.com/overtone/emacs-live/master/installer/install-emacs-live.sh)
 
 ### Pulling it all together
 
