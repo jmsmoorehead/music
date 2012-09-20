@@ -2,7 +2,6 @@ For the best live coding experience in emacs, you'll want to install...
 
 * Leiningen 2
 * Emacs Live
-* lein-swank
 
 
 ### Leiningen 2
@@ -16,22 +15,12 @@ See https://github.com/overtone/emacs-live#getting-started
 
     bash <(curl -fsSL https://raw.github.com/overtone/emacs-live/master/installer/install-emacs-live.sh)
 
-
-
-### lein-swank
-
-Create a file called `~/.lein/profiles.clj` with the following contents:
-
-```clj
-{:user {:plugins [[lein-swank "1.4.4"]]}}
-```
-
 ### Pulling it all together
 
 * `cd` into a directory containing a lein project which references overtone as a dependency. 
-* Fire up swank: `lein swank`
+* Fire up nrepl: `lein repl`
 * Fire up Emacs
-* Connect Emacs to swank: `M-x slime-connect <RET> <RET> <RET>`
+* Connect Emacs to nrepl: `M-x nrepl
 * Fire up Overtone:
 
 ```clj
