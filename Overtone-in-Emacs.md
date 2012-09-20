@@ -20,7 +20,7 @@ See https://github.com/overtone/emacs-live#getting-started
 * `cd` into a directory containing a lein project which references overtone as a dependency. 
 * Fire up nrepl: `lein repl`
 * Fire up Emacs
-* Connect Emacs to nrepl: `M-x nrepl
+* Connect Emacs to nrepl: `M-x nrepl`
 * Fire up Overtone:
 
 ```clj
