@@ -26,9 +26,9 @@ See https://github.com/overtone/emacs-live#getting-started
 * Fire up Emacs
 * Connect Emacs to nrepl: `M-x nrepl`
 
-  You will be prompted for a `Host:` type `localhost`
+  At the `Host:` prompt, type `localhost`
 
-  The next prompt will be for `Port:` enter the nREPL port number, above.
+  When the prompt `Port:` appears, enter the nREPL port number, from above.
 
 * Fire up Overtone:
 
