@@ -19,8 +19,17 @@ See https://github.com/overtone/emacs-live#getting-started
 
 * `cd` into a directory containing a lein project which references overtone as a dependency. 
 * Fire up nrepl: `lein repl`
+
+  Look for the line `nREPL server started on port 55803`
+  Note that the actual port number may be quite different, remember yours.
+
 * Fire up Emacs
 * Connect Emacs to nrepl: `M-x nrepl`
+
+  You will be prompted for a `Host:` type `localhost`
+
+  The next prompt will be for `Port:` enter the nREPL port number, above.
+
 * Fire up Overtone:
 
 ```clj
