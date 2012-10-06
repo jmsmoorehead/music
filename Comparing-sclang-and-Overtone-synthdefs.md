@@ -86,4 +86,16 @@ If your Overtone implementation of your synth design doesn't behave similarly to
 
 Currently the best way of doing this is to pretty print both synthdefs and place them in side-by-side buffers for manual comparison. Pick your way through each one and see where they differ.
 
+## Miscellaneous Questions
 
+**Q: Is there an equivalent to sclang's .range() syntax?**
+
+**A: No** To translate something like this:
+```supercollider
+    SinOsc.ar(3).range(30,40)
+```
+the current way to achieve your goals in Overtone is to do something like:
+```clojure
+    (lin-lin (sin-osc 3) -1 1 30 40)
+```
+Which linearly maps the input range [-1,1] to [30,40].
