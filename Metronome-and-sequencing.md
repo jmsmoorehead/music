@@ -8,9 +8,10 @@ Here's an example of how to set up a simple metronome sound, for musical practic
 (def one-twenty-bpm (metronome 120))
 
 ; this function will play our sound at whatever tempo we've set our metronome to 
-(defn looper [nome sound]    (let [beat (nome)]
-    (at (nome beat) (sound))
-    (apply-at (nome (inc beat)) looper nome sound [])))
+(defn looper [nome sound]    
+    (let [beat (nome)]
+        (at (nome beat) (sound))
+        (apply-at (nome (inc beat)) looper nome sound [])))
 
 ; turn on the metronome
 (looper one-twenty-bpm kick)
