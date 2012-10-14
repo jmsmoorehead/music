@@ -26,6 +26,8 @@ Why yes, yes it is:
   (at (metro (+ 1.65 beat)) (c-hat))
   (apply-at (metro (+ 2 beat)) #'swinger (+ 2 beat) []))
 
+; define a metronome at a given tempo, expressed in beats per minute.
+(def metro (metronome 120))
 
 (swinger (metro))
 ```
