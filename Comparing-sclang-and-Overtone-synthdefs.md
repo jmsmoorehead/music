@@ -67,7 +67,12 @@ If your Overtone implementation of your synth design doesn't behave similarly to
   - OS X: ~/Library/Application Support/SuperCollider/synthdefs/help-Diskout.scsyndef
   - Linux: Please add me
   - Windows: Please add me
-* Read and bind the synthdef: `(def sc-synthdef (synthdef-read "/path/to/synthef.scsyndef"))`
+* Read and bind the synthdef: 
+
+```clojure
+(use '[overtone.sc.machinery.synthdef :only [synthdef-read]]) 
+(def sc-synthdef (synthdef-read "/path/to/synthef.scsyndef"))
+```
 
 ## Generating Overtone synthdefs
 
