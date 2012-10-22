@@ -35,3 +35,50 @@ If you want to load a sample and use it as a signal-generator in a more complex 
 
 (reverb-on-left)
 ```
+
+## Loading Samples from Freesound
+
+The website http://www.freesound.org/ has a large variety of sounds available.  Overtone will download and cache files locally.  For example:
+
+```clj
+(def snare (sample (freesound-path 26903))) 
+(snare)
+```
+
+### Freesound samples people have found useful
+
+Searching for sound files can sometimes be a bit difficult to find exactly what you want.  Here are some files that people have used in example code from a google search in October of 2012.  Consider adding useful sounds here for others.
+
+<table>
+<tr>
+<th> id </th><th> name </th><th> id </th><th> name </th><th> id </th><th> name </th><th> id </th><th> name </th>
+</tr><tr>
+<td>406</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=406">click</a> </td>
+<td>436</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=436">ride</a> </td>
+<td>777</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=777">kick</a> </td>
+<td>802</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=802">close-hat</a> </td>
+</tr><tr>
+<td> 2086</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=2086">kick2</a> </td>
+<td> 8323</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=8323">powerwords</a> </td>
+<td> 9088</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=9088">jetbike</a> </td>
+<td>13254</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=13254">cymbal</a> </td>
+</tr><tr>
+<td>16309</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=16309">open-snare</a> </td>
+<td>16568</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=16568">two-cows</a> </td>
+<td>25649</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=25649">subby</a> </td>
+<td>26657</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=26657">open-hat</a> </td>
+</tr><tr>
+<td>26903</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=26903">snare</a> </td>
+<td>30628</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=30628">steam-whistles</a> </td>
+<td>33637</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=33637">boom</a> </td>
+<td>44293</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=44293">sleigh-bells</a> </td>
+</tr><tr>
+<td>48310</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=48310">clap</a> </td>
+<td>50623</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=50623">water-drops</a> </td>
+<td>80187</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=80187">witch-cackle</a> </td>
+<td>80401</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=80401">explosion</a> </td>
+</tr><tr>
+<td> 87731</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=87731">snap</a> </td>
+<td>132676</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=132676">clap2</a> </td>
+</tr>
+</table>
