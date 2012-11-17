@@ -20,9 +20,9 @@ Much of this can be seen in [the code](https://github.com/overtone/overtone/blob
 (saw-wave (midi->hz 60)) ; This is C4
 
 ;; We can play notes using standard music notes as well
-(saw-wave (midi->hz (note :A4)
-(saw-wave (midi->hz (note :C5)
-(saw-wave (midi->hz (note :C4) ; This is C4! Surprised?
+(saw-wave (midi->hz (note :A4)))
+(saw-wave (midi->hz (note :C5)))
+(saw-wave (midi->hz (note :C4))) ; This is C4! Surprised?
 
 ;; Define a function for convenience
 (defn note->hz [music-note]
