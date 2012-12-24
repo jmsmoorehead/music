@@ -4,7 +4,7 @@ Installing Overtone is as simple as installing a standard Clojure library which 
 * Create a new project
 * Pull in dependencies
 
-### Install leiningen
+### Install leiningen 2+
 
 Head over here and follow the instructions: https://github.com/technomancy/leiningen/#installation
 
@@ -27,8 +27,8 @@ Therefore, open up `tutorial/project.clj` and edit it to look as follows:
 
 ```clj
 (defproject tutorial "1.0"
-  :dependencies [ [org.clojure/clojure "1.3.0"]
-                  [overtone "0.7.1"] ])
+  :dependencies [ [org.clojure/clojure "1.4.0"]
+                  [overtone "0.8.0"] ])
 ```
 
 Now, to pull in the dependencies, you just need to run `lein deps` from within the project directory:
