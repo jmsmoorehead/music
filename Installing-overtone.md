@@ -28,7 +28,7 @@ Therefore, open up `tutorial/project.clj` and edit it to look as follows:
 ```clj
 (defproject tutorial "1.0"
   :dependencies [ [org.clojure/clojure "1.4.0"]
-                  [overtone "0.8.0"] ])
+                  [overtone "0.8.0-RC15"] ])
 ```
 
 Now, to pull in the dependencies, you just need to run `lein deps` from within the project directory:
