@@ -1,4 +1,4 @@
-At this point we assume that you have [[installed Overtone|Installing Overtone]] and [[started a REPL|Starting a REPL]]. You should be in the position where you see the following on your terminal:
+At this point we assume that you have [[installed Overtone|Installing Overtone]] and [[started a REPL|Starting a REPL]] and have installed supercollider (e.g. `apt-get install supercollider`). You should be in the position where you see the following on your terminal:
 
     user=>
 
