@@ -21,14 +21,14 @@ This will create you a new project directory structure skeleton within which to 
 
 ### Pull in Dependencies
 
-Overtone relies on a number of external dependencies which must be available on your system. Luckily this doesn't mean lots of manual downloading as lein will handle all this for you. All you need to do is to tell lein that your project depends on Overtone, and lein will figure out the rest. When you created the `tutorial` project, lein created a file called `tutorial/project.clj`. This is the file you use to tell lein about the specifics of your project. In this case we only care about telling lein that Overtone is a dependency. This is as simple as adding `[overtone "0.7.1"]` to the list of dependencies.
+Overtone relies on a number of external dependencies which must be available on your system. Luckily this doesn't mean lots of manual downloading as lein will handle all this for you. All you need to do is to tell lein that your project depends on Overtone, and lein will figure out the rest. When you created the `tutorial` project, lein created a file called `tutorial/project.clj`. This is the file you use to tell lein about the specifics of your project. In this case we only care about telling lein that Overtone is a dependency. This is as simple as adding `[overtone "0.8.0"]` to the list of dependencies.
 
 Therefore, open up `tutorial/project.clj` and edit it to look as follows:
 
 ```clj
 (defproject tutorial "1.0"
   :dependencies [ [org.clojure/clojure "1.4.0"]
-                  [overtone "0.8.0-RC19"] ])
+                  [overtone "0.8.0"] ])
 ```
 
 Now, to pull in the dependencies, you just need to run `lein deps` from within the project directory:
