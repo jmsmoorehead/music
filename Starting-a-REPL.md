@@ -24,11 +24,10 @@ user=> (+ 1 2)
 user=>
 ```
 
-The basic command-line REPL via `clojure-maven-plugin` does not provide much of any "creature comforts" (e.g. no readline support, no command history), so you may want to explore using a better REPL via [swank](https://github.com/technomancy/swank-clojure) (if you're an emacs fan) or [nREPL](http://github.com/clojure/tools.nrepl) (if you prefer Eclipse / [Counterclockwise](http://code.google.com/p/counterclockwise/)).
+The basic command-line REPL via `clojure-maven-plugin` does not provide much of any "creature comforts" (e.g. no readline support, no command history), so you may want to explore using a better REPL via [nrepl.el](https://github.com/kingtim/nrepl.el) (if you're an emacs fan) or [nREPL](http://github.com/clojure/tools.nrepl) (if you prefer Eclipse / [Counterclockwise](http://code.google.com/p/counterclockwise/)).
 
 ### What next?
 
 Learn how to [[Connect scsynth|Connecting scsynth]] then head over to [[Getting Started]] to learn how to make some crazy sounds.
 
     
-
