@@ -14,7 +14,7 @@ First up, we need to start an OSC server from within Overtone. This will listen 
 Starting a server is simple, we just need to think of a port number. Let's go with `44100` because it fits with our musical context:
 
 ```clj
-    (use 'overtone.osc)
+    (use 'overtone.live)
     (def server (osc-server 44100 "osc-clj"))
 ```
 
