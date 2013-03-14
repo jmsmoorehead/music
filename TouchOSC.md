@@ -14,6 +14,7 @@ First up, we need to start an OSC server from within Overtone. This will listen 
 Starting a server is simple, we just need to think of a port number. Let's go with `44100` because it fits with our musical context:
 
 ```clj
+    (use 'overtone.osc)
     (def server (osc-server 44100 "osc-clj"))
 ```
 
@@ -111,6 +112,5 @@ Now, all we need to do is to trigger `foo`:
 and now manipulate our slider to directly modulate `foo`'s frequency. What fun!
 
 Where to go next is only limited by your imagination...
-
 
 
