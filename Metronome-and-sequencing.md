@@ -28,4 +28,5 @@ Here's an example of how to set up a simple metronome sound, for musical practic
 ; it is, in fact, ticking in the background. a "beat" is just convenient way to represent a timestamp.
 ; leave your metronome defined at the REPL, and the beat number will steadily increase, even if you aren't
 ; using the object for anything.
+```
 
