@@ -27,7 +27,7 @@ Therefore, open up `tutorial/project.clj` and edit it to look as follows:
 
 ```clj
 (defproject tutorial "1.0"
-  :dependencies [ [org.clojure/clojure "1.5.0"]
+  :dependencies [ [org.clojure/clojure "1.5.1"]
                   [overtone "0.8.1"] ])
 ```
 
