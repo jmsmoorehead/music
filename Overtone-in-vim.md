@@ -1,15 +1,12 @@
 ## Installation
-For the best live coding experience in vim, you'll want to install...
 
-* vimclojure
-* nailgun
+For the best live coding experience in vim, you'll want to install:
 
-A great way to get started with vimclojure in vim is Dave Ray's [vimclojure-easy](https://github.com/daveray/vimclojure-easy).
+* [vim-clojure-static](https://github.com/guns/vim-clojure-static)
+* [vim-fireplace](https://github.com/tpope/vim-fireplace)
+* [vim-classpath](https://github.com/tpope/vim-classpath)
 
-## Getting started
+Some tips:
 
- * Start the nailgun server (see vimclojure-easy for instructions)
- * Start editing a song.clj file in vim
- * Use the Overtone live namespace: `(ns your.song (:use [overtone.live]))`
- * Evaluate the file (`\ef`), which will take a while as it needs to start Supercollider.
- * You can now start evaluating lines (`\el`) and forms (`\ep`) interactively with vimclojure!
+* The first time you open a Clojure file, it'll take a few seconds for the Java VM to load
+* Within a Clojure file, you can use `cpp` to evaluate the inner-most expression at the cursor, or `:Require` to reload the whole file.
