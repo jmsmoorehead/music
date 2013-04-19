@@ -8,7 +8,7 @@ For the best live coding experience in vim, you'll want to install:
 
 Now:
 
-* In one shell session, start a REPL using `lein repl`.
+* In one shell session, start a REPL using `lein repl`. It is important to do this as otherwise when you require your file for the first time, Overtone opens and blocks vim.
 * In vim, start writing your Overtone file. Hint: it tends to work better if you use `overtone.live` rather than `overtone.core`.
 * The first time you want to hear some output, use `:Require` to reload the whole file. You will also need to do this any time you add a new instrument or something else.
 * After the file has been loaded once, use `cpp` to evaluate the inner-most expression at the cursor.
