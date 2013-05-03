@@ -37,6 +37,7 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 * [[buffers and audio files]]
 * [[midi]]
 * [[recording]]
+* [[screencasting]]
 
 #### Making music:
 * [[metronome and sequencing]]
