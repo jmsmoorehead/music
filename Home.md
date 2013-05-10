@@ -1,4 +1,4 @@
-## Welcome to Project Overtone!
+## Welcome to the Overtone Wiki
 
 Our goal is to create a top notch live-coding environment and audio collaboration platform that's free for everyone to download, hack on and make crazy-cool sounds either individually or in groups. We've come a long way towards achieving this vision and hope you'll join in and help take things even further...
 
