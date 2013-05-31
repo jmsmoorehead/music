@@ -25,6 +25,10 @@ http://www.youtube.com/watch?v=6J-RQudJx30
 
 The safer way is to follow option #4 from http://jackaudio.org/pulseaudio_and_jack
 
+## If you can't start jackd without root rights
+
+jackd needs an appropriate privelege to run. This post details a solution: http://ubuntuforums.org/showthread.php?t=1637399&p=10199399#post10199399
+
 ## Note for Fedora Users
 
 It has been reported that the command `jack_lsp` is required and may be obtained by installing the fedora package `jack-audio-connection-kit-example-clients` 
