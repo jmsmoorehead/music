@@ -46,3 +46,30 @@ The last argument is a keyword which can be used to refer to this handler, so yo
 ```clj
 (remove-handler ::keyboard-handler)
 ```
+
+## Simple Midi Keyboard Control
+
+Use `midi-poly-player` for simple control of Overtone instruments.
+
+Define an inst to play with the midi keyboard
+
+```clj
+(definst steel-drum [note 60 amp 0.8]
+  (let [freq (midicps note)]
+    (* amp
+       (env-gen (perc 0.01 0.2) 1 1 0 1 :action FREE)
+       (+ (sin-osc (/ freq 2))
+          (rlpf (saw freq) (* 1.1 freq) 0.4)))))
+```
+
+Define a player that connects midi input to that instrument.
+
+```clj
+(def player (midi-poly-player steel-drum))
+```
+
+When you want to stop or change sounds, use `midi-player-stop`.
+
+```clj
+(midi-player-stop)
+```
