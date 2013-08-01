@@ -25,6 +25,8 @@ http://www.youtube.com/watch?v=6J-RQudJx30
 
 The safer way is to follow option #4 from http://jackaudio.org/pulseaudio_and_jack
 
+An alternative option, if you don't need pulseaudio running, is to kill pulseaudio and then run jackd. Here's more information: http://askubuntu.com/a/232163/22073
+
 ## If you can't start jackd without root rights
 
 jackd needs an appropriate privelege to run. This post details a solution: http://ubuntuforums.org/showthread.php?t=1637399&p=10199399#post10199399
