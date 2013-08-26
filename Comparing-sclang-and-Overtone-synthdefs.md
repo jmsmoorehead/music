@@ -65,8 +65,8 @@ If your Overtone implementation of your synth design doesn't behave similarly to
 
 * Locate your file. On 
   - OS X: ~/Library/Application Support/SuperCollider/synthdefs/help-Diskout.scsyndef
-  - Linux: Please add me
-  - Windows: Please add me
+  - Linux: ~/.local/share/SuperCollider/synthdefs/help-Diskout.scsyndef
+  - Windows: %LOCALAPPDATA%\SuperCollider\synthdefs\help-Diskout.scsyndef
 * Read and bind the synthdef: 
 
 ```clojure
