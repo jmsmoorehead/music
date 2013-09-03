@@ -33,7 +33,7 @@ be at 100% volume!!!
 
 ```clj
 > (foo) ; Call the function returned by our synth
-4      ; returns a synth ID number
+#<synth-node[loading]: user/foo 4>      ; returns a synth ID number
 > (kill 4) ; kill the synth with ID 4
 > (kill foo) ; or kill all instances of synth foo
 ```
