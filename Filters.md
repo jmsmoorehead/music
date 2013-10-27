@@ -4,7 +4,7 @@ Filters take a signal and modify it in some manner.
 
 Overtone comes with a number of standard linear filters: `lpf`, `hpf`, and `bpf` are low-pass, high-pass and band-pass filters respectively.
 
-```clj
+```clojure
 (demo 10 (lpf (saw 100) (mouse-x 40 5000 EXP)))
 ;; low-pass; move the mouse left and right to change the threshold frequency
 
@@ -19,7 +19,7 @@ Overtone comes with a number of standard linear filters: `lpf`, `hpf`, and `bpf`
 
 You can do Karplus-Strong string synthesis with the `pluck` filter. Karplus-Strong works by taking a signal, filtering it and feeding it back into itself after a delay, so that the output eventually becomes periodic.
 
-```clj    
+```clojure
 ;; here we generate a pulse of white noise, and pass it through a pluck filter
 ;; with a delay based on the given frequency
 (let [freq 220]
