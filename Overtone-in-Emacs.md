@@ -40,7 +40,7 @@ user> (use 'overtone.live)
        / /_/ /| |/ /  __/ /  / /_/ /_/ / / / /  __/
        \____/ |___/\___/_/   \__/\____/_/ /_/\___/
 
-                          Programmable Music. v0.7-dev
+                          Programmable Music. v0.9.0
 
 
 Hello User, may this be the start of a beautiful music hacking session...
