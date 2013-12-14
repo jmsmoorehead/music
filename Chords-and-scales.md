@@ -5,7 +5,7 @@ Much of this can be seen in [the code](https://github.com/overtone/overtone/blob
 ```clj
 ;; We use a saw-wave that we defined in the oscillators tutorial
 (definst saw-wave [freq 440 attack 0.01 sustain 0.4 release 0.1 vol 0.4] 
-  (* (env-gen (lin-env attack sustain release) 1 1 0 1 FREE)
+  (* (env-gen (env-lin attack sustain release) 1 1 0 1 FREE)
      (saw freq)
      vol))
 
