@@ -2,7 +2,7 @@ The oscillator ugens act as your source of raw audio content.  In subtractive sy
 
 ```clojure
 (definst sin-wave [freq 440 attack 0.01 sustain 0.4 release 0.1 vol 0.4] 
-  (* (env-gen (env-lin attack sustain release) 1 1 0 1 FREE)
+  (* (env-gen (lin-env attack sustain release) 1 1 0 1 FREE)
      (sin-osc freq)
      vol))
 (sin-wave)
@@ -15,7 +15,7 @@ The oscillator ugens act as your source of raw audio content.  In subtractive sy
      vol))
 
 (definst square-wave [freq 440 attack 0.01 sustain 0.4 release 0.1 vol 0.4] 
-  (* (env-gen (env-lin attack sustain release) 1 1 0 1 FREE)
+  (* (env-gen (lin-env attack sustain release) 1 1 0 1 FREE)
      (lf-pulse freq)
      vol))
 
@@ -25,7 +25,7 @@ The oscillator ugens act as your source of raw audio content.  In subtractive sy
      vol))
 
 (definst triangle-wave [freq 440 attack 0.01 sustain 0.1 release 0.4 vol 0.4] 
-  (* (env-gen (env-lin attack sustain release) 1 1 0 1 FREE)
+  (* (env-gen (lin-env attack sustain release) 1 1 0 1 FREE)
      (lf-tri freq)
      vol))
 ```
