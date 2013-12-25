@@ -18,7 +18,7 @@ The oscillator ugens act as your source of raw audio content.  In subtractive sy
 
 (definst square-wave [freq 440 attack 0.01 sustain 0.4 release 0.1 vol 0.4] 
   (* (env-gen (lin attack sustain release) 1 1 0 1 FREE)
-     (lf-pulse freq)
+     (lf-pulse:ar freq)
      vol))
 
 (definst noisey [freq 440 attack 0.01 sustain 0.4 release 0.1 vol 0.4] 
