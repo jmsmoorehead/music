@@ -10,7 +10,7 @@ The oscillator ugens act as your source of raw audio content.  In subtractive sy
 
 ```clojure
 (definst saw-wave [freq 440 attack 0.01 sustain 0.4 release 0.1 vol 0.4] 
-  (* (env-gen (env-lin attack sustain release) 1 1 0 1 FREE)
+  (* (env-gen (lin-env attack sustain release) 1 1 0 1 FREE)
      (saw freq)
      vol))
 
@@ -20,7 +20,7 @@ The oscillator ugens act as your source of raw audio content.  In subtractive sy
      vol))
 
 (definst noisey [freq 440 attack 0.01 sustain 0.4 release 0.1 vol 0.4] 
-  (* (env-gen (env-lin attack sustain release) 1 1 0 1 FREE)
+  (* (env-gen (lin-env attack sustain release) 1 1 0 1 FREE)
      (pink-noise) ; also have (white-noise) and others...
      vol))
 
@@ -36,7 +36,7 @@ Note that you can also use these generators as control signals to modify paramet
 (definst spooky-house [freq 440 width 0.2 
                          attack 0.3 sustain 4 release 0.3 
                          vol 0.4] 
-  (* (env-gen (env-lin attack sustain release) 1 1 0 1 FREE)
+  (* (env-gen (lin-env attack sustain release) 1 1 0 1 FREE)
      (sin-osc (+ freq (* 20 (lf-pulse:kr 0.5 0 width))))
      vol))
 ```
