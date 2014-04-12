@@ -41,7 +41,7 @@ If you want to load a sample and use it as a signal-generator in a more complex 
 The website http://www.freesound.org/ has a large variety of sounds available.  Overtone will download and cache files locally.  For example:
 
 ```clj
-(def snare (sample (freesound-path 26903))) 
+(def snare (freesound 26903))
 (snare)
 ```
 
