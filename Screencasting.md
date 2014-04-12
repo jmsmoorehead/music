@@ -4,6 +4,8 @@ Instructions on how to create screencasts that incorporate Overtone audio.
 
 ## Mac
 
+If you're happy to pay for software, [ScreenFlow](http://www.telestream.net/screenflow/overview.htm) works perfectly with Overtone. Otherwise the following is a free alternative:
+
 Adapted from
 http://www.soundpimp.com/guidelines/computer-audio-enhancer-mac-osx/
 following the "Alternative 1 - Audio routing setup using Jack"
