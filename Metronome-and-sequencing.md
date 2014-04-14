@@ -11,7 +11,7 @@ Here's an example of how to set up a simple metronome sound, for musical practic
 (defn looper [nome sound]    
     (let [beat (nome)]
         (at (nome beat) (sound))
-        (apply-at (nome (inc beat)) looper nome sound [])))
+        (apply-by (nome (inc beat)) looper nome sound [])))
 
 ; turn on the metronome
 (looper one-twenty-bpm kick)
