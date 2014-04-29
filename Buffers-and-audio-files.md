@@ -79,6 +79,6 @@ Searching for sound files can sometimes be a bit difficult to find exactly what 
 <td>80401</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=80401">explosion</a> </td>
 </tr><tr>
 <td> 87731</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=87731">snap</a> </td>
-<td>132676</td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=132676">clap2</a> </td>
+<td><del>132676</del></td><td> <a href="http://www.freesound.org/samplesViewSingle.php?id=132676"><del>clap2</del></a> </td>
 </tr>
 </table>
