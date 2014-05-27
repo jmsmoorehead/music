@@ -44,7 +44,7 @@ For simplicity use the general event type:
 The last argument is a keyword which can be used to refer to this handler, so you can later do:
 
 ```clj
-(remove-handler ::keyboard-handler)
+(remove-event-handler ::keyboard-handler)
 ```
 
 ## Simple Midi Keyboard Control
