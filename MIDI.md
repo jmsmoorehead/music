@@ -3,7 +3,7 @@
 Overtone 0.7.1 automatically detects all connected MIDI devices on boot and registers the appropriate handlers for you. To see a list of MIDI devices detected by Overtone, use:
 
 ```clj
-(connected-midi-devices)
+(midi-connected-devices)
 ```
 
 The MIDI device should be connected and powered on before starting Overtone. When you bash the keys on the keyboard, Overtone receives internal events in its event stream. To see them use:
