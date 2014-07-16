@@ -1,14 +1,14 @@
-Before you start, please note that using Overtone is sometimes a difficult startup process for the newcomer.  It will definitely help if you comfortable with some or all of the following:
+Before you start, please note that using Overtone is sometimes a difficult startup process for the newcomer.  It will definitely help if you are comfortable with some or all of the following:
 
-* Using a command line environment for your system.  You will need to perform basic UNIX or DOS commands to setup a development environment.
-* Change - Overtone is a tool under development.
-* The [Clojure](http://clojure.org/) language and build tools.
-* Text editors like Sublime, Emacs, Vi or a developer environment like Eclipse with CounterClockwise.   
-* The basics of music theory.
-* The basics of sound synthesis
-* The [Supercollider](http://supercollider.sourceforge.net/) audio synthesis environment.  
+* Using a **command line environment** for your system.  You will need to perform basic UNIX or DOS commands to setup a development environment.
+* The **[Clojure](http://clojure.org/) language and environment** (e.g. [Leiningen](http://leiningen.org/) and the REPL).
+* **Text editors** like Sublime, Emacs, Vi or a developer environment like Eclipse with CounterClockwise.   
+* The **[Supercollider](http://supercollider.sourceforge.net/)** audio synthesis environment.  
+* The basics of **music theory**.
+* The basics of **sound synthesis**.
+* **Change** - Overtone is a tool under development.
 
-Now, you can dive in without being comfortable with all of these topics, but understand that it will not be a easy experience until you gain some background in all of these areas.  You should expect to spend some time learning.  Take your time, plan to spend time filling in the areas that are not familiar and enjoy the journey.  If you have questions, the [Google Group](https://groups.google.com/forum/?fromgroups=#!forum/overtone) is a great resource.
+You can dive in without being comfortable with all of these topics, but understand that it will not be a easy experience until you gain some background in all of these areas.  You should expect to spend some time learning.  Take your time, plan to spend time filling in the areas that are not familiar and enjoy the journey.  If you have questions, the [Google Group](https://groups.google.com/forum/?fromgroups=#!forum/overtone) is a great resource.
 
 Getting Started
 ===============
