@@ -1,4 +1,4 @@
-For the best live coding experience in emacs, you'll want to install...
+For the best live coding experience in emacs, you'll want to install:
 
 * Leiningen 2
 * Emacs Live
@@ -24,8 +24,7 @@ See https://github.com/overtone/emacs-live#getting-started
   Note that the actual port number may be quite different, remember yours.
 
 * Fire up Emacs
-* Connect Emacs to nrepl: `M-x nrepl` 
-* or in newer versions of Emacs Live: `M-x cider`.
+* Connect Emacs to nrepl: `M-x nrepl` or in newer versions of Emacs Live: `M-x cider`.
 
   At the `Host:` prompt, type `localhost`
 
