@@ -24,7 +24,8 @@ See https://github.com/overtone/emacs-live#getting-started
   Note that the actual port number may be quite different, remember yours.
 
 * Fire up Emacs
-* Connect Emacs to nrepl: `M-x nrepl`
+* Connect Emacs to nrepl: `M-x nrepl` 
+* or in newer versions of Emacs Live: `M-x cider`.
 
   At the `Host:` prompt, type `localhost`
 
