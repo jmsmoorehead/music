@@ -1,6 +1,6 @@
 Before you start, please note that using Overtone is sometimes a difficult startup process for the newcomer.  It will definitely help if you are comfortable with some or all of the following:
 
-* Using a **command line environment** for your system.  You will need to perform basic UNIX or DOS commands to setup a development environment.
+* Using a **command line environment** for your system.  You will need to perform basic UNIX or DOS commands to set up a development environment.
 * The **[Clojure](http://clojure.org/) language and environment** (e.g. [Leiningen](http://leiningen.org/) and the REPL).
 * **Text editors** like Sublime, Emacs, Vi or a developer environment like Eclipse with CounterClockwise.   
 * The **[Supercollider](http://supercollider.sourceforge.net/)** audio synthesis environment.  
