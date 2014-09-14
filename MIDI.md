@@ -1,3 +1,10 @@
+# Overtone 0.9.1
+
+See [the end of the midi/keyboard example](https://github.com/overtone/overtone/blob/master/src/overtone/examples/midi/keyboard.clj#L49-L64).
+
+
+# Overtone 0.7.1
+
 ## Using the event stream
 
 Overtone 0.7.1 automatically detects all connected MIDI devices on boot and registers the appropriate handlers for you. To see a list of MIDI devices detected by Overtone, use:
