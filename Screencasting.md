@@ -70,6 +70,31 @@ Tested May, 2013 on OSX 10.7.5
 
 Now you can listen to the recorded movie, edit and prepare it for uploading to your favorite video-sharing site.
 
-## Other Platforms
+### Other Platforms
 
-Please add instructions if you can.
+## Gnu/Linux
+
+To screencast you need to compile the last version of ffmpeg (http://www.ffmpeg.org) 
+
+in terminal do:
+
+git clone git://source.ffmpeg.org/ffmpeg.git ffmpeg
+
+then yo need to compile with x11grab support
+
+go to the source directory and type in terminal:
+./configure --enable-gpl --enable-x11grab
+make
+sudo make install
+
+if all is ok, you only need to start Jack client, Overtone, Emacs, etc. and, when you are ready, open a terminal in the folder you want to create the video and put this:
+
+(you can change the options in the line below to you preference)
+
+ffmpeg -f jack -i ffmpeg -f x11grab -framerate 25 -video_size 800x600 -i :0.0 example.mpg 
+
+then, in qjackctl, connect the SuperCollider ouputs to the ffmpeg inputs and its done..
+
+when you finish, stop the proces with ^z and close the terminal.
+
+lets make videos !
