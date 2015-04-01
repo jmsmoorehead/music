@@ -40,8 +40,8 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 * [[screencasting]]
 
 #### Making music:
-* [[Pitches, Scales, and Scale Degrees]]
-* [[Chords]]
+* [[Pitches and Chords]]
+* [[Scales and Scale Degrees]]
 * [[Metronome and Sequencing]]
 * [[Arpeggiators and Note Generators]]
 * [[live-coding]]
