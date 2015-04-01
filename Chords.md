@@ -85,5 +85,3 @@ Much of this can be seen in [the code](https://github.com/overtone/overtone/blob
 )
 (chord-progression-beat metro (metro))
 ```
-
-Scales examples later.
