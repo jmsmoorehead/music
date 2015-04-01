@@ -40,9 +40,10 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 * [[screencasting]]
 
 #### Making music:
-* [[metronome and sequencing]]
-* [[chords and scales]]
-* [[arpeggiators and note generators]]
+* [[Pitches, Scales, and Scale Degrees]]
+* [[Chords]]
+* [[Metronome and Sequencing]]
+* [[Arpeggiators and Note Generators]]
 * [[live-coding]]
 * [[swing]]
 
