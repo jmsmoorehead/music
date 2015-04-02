@@ -24,6 +24,7 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 #### First steps
 * [Overtone Cheat Sheet](https://github.com/overtone/overtone/raw/master/docs/cheatsheet/overtone-cheat-sheet.pdf)
 * [[Getting Started]]
+* [[Running Examples]]
 
 #### Synthesis:
 * [[oscillators]]
