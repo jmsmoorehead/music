@@ -52,6 +52,9 @@ If you see any errors/issues/omissions, please feel free to fix/add things - we'
 * [[Monome]]
 * [[TouchOSC]]
 
+#### Reference:
+* [UGens](https://github.com/overtone/overtone/blob/master/docs/ugens.md)
+
 #### In progress:
 * [[sessions and instruments]]
 
