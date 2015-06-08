@@ -16,7 +16,7 @@ If you get errors from the above try:
 jackd -r -d alsa -r 44100 -P
 ```
 
-An alternative is to use the qjackctl gui. If you want to use jack through pulse audio on modern versions of linux see [here](https://wiki.archlinux.org/index.php/PulseAudio/Examples#PulseAudio_through_JACK)
+An alternative is to use the qjackctl gui. If you want to use jack through pulseaudio on dbus enabled distros like Arch or Ubuntu 15.04 of linux see [here](https://wiki.archlinux.org/index.php/PulseAudio/Examples#PulseAudio_through_JACK)
 
 We hope to support ALSA audio in future versions.
 
