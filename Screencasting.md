@@ -92,10 +92,10 @@ if all is ok, you only need to start Jack client, Overtone, Emacs, etc. and, whe
 
 (you can change the options in the line below to your preference)
 
-`ffmpeg -f jack -i ffmpeg -f x11grab -framerate 25 -video_size 800x600 -i :0.0 example.mpg`
+`ffmpeg -f jack -i ffmpeg -f x11grab -framerate 20 -video_size 800x600 -i :0.0 -b:v 2000k example.mpg`
 
-then, in qjackctl, connect the SuperCollider ouputs to the ffmpeg inputs and its done..
+then, in *qjackctl (TODO command-line way), connect the SuperCollider ouputs to the ffmpeg inputs and its done..
 
-when you finish, stop the process with ^z and close the terminal.
+when you finish, stop the process with ^C. (ctl+c).
 
 lets make videos !
