@@ -65,12 +65,21 @@ http://www.midi.org/techspecs/midimessages.php#3
 Here's an example of checking if the sustain pedal is pressed:
 
 ```clj
+(def sustain-pedal (atom false))
+
 (on-event [:midi :control-change]
           (fn [e]
               (let [control-number (:data1 e)
-                    pressure-applied (/ (:data2 e) 127.0)]
-                   ;Do what you want with this infomation
-               )))
+                    value (:data2 e)]
+                   (if (= control-number 64)
+                       (when (or (and (>= value 64) (not @sustain-pedal)
+                                 (and (<= value 63) ))
+                             (swap! sustain-pedal #(not %)))
+                       ;else
+                       (when (and (<= value 63) @sustain-pedal)
+                             (swap! sustain-pedal #))
+              ))
+           ::sus-pedal-handler)
 ```
 
 ## Sending MIDI messages
