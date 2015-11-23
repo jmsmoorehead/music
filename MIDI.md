@@ -54,6 +54,31 @@ The last argument is a keyword which can be used to refer to this handler, so yo
 (remove-event-handler ::keyboard-handler)
 ```
 
+Apart from the ```:note-on``` events, there are also many more which can be found over here: 
+https://github.com/overtone/midi-clj/blob/master/src/overtone/midi.clj#L167-191
+
+Tables 1 and 3 would be very useful if you want greater control over overtone using midi.
+
+http://www.midi.org/techspecs/midimessages.php
+http://www.midi.org/techspecs/midimessages.php#3
+
+## Sending MIDI messages
+
+It is also possible to send MIDI messages to a receiver (Why not make the computer a jamming buddy :wink:)
+
+```clj
+(let [receiver (first (midi-connected-receiver))]
+  ;Play a midi note c4 at 80 velocity for 1 second on the fourth channel
+  ;Note that the channel is zero-indexed, whereas normal mixers/midi devices start counting them from 1.
+  (overtone.midi/midi-note receiver (note :c4) 80 1 3)
+  
+  ;Turn on the sustain pedal to full on the first channel
+  ;64 is the midi control number for the sustain (damper) pedal.
+  (overtone.midi/midi-control receiver 64 127 0)
+)
+
+```
+
 ## Simple Midi Keyboard Control
 
 Use `midi-poly-player` for simple control of Overtone instruments.
