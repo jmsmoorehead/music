@@ -62,6 +62,17 @@ Tables 1 and 3 would be very useful if you want greater control over overtone us
 http://www.midi.org/techspecs/midimessages.php
 http://www.midi.org/techspecs/midimessages.php#3
 
+Here's an example of checking if the sustain pedal is pressed:
+
+```clj
+(on-event [:midi :control-change]
+          (fn [e]
+              (let [control-number (:data1 e)
+                    pressure-applied (/ (:data2 e) 127.0)]
+                   ;Do what you want with this infomation
+               )))
+```
+
 ## Sending MIDI messages
 
 It is also possible to send MIDI messages to a receiver (Why not make the computer a jamming buddy :wink:)
