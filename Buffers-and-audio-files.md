@@ -36,6 +36,16 @@ If you want to load a sample and use it as a signal-generator in a more complex 
 (reverb-on-left)
 ```
 
+Samples/buffers can be passed to the synth at the time its played:
+
+```clj
+(def sample-buf (load-sample "36.wav"))
+(defsynth sample-player [buf] (out 0 (play-buf 1 buf)))
+
+(sample-player sample-buf)
+```
+
+
 ## Loading Samples from Freesound
 
 The website http://www.freesound.org/ has a large variety of sounds available.  Overtone will download and cache files locally.  For example:
