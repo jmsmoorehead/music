@@ -22,6 +22,8 @@ Buffers are in-memory storage spots for audio files, and they can be either read
 (scope :buf flute-buf)
 ```
 
+(N.B. see this [Google groups discussion](https://groups.google.com/forum/#!searchin/overtone/scope/overtone/FJmMtV0sYIQ/8iet2oZBO2gJ) on potential troubles (e.g. crashing your JVM!) using scope)
+
 ### Playing a sample from a buffer
 
 If you want to load a sample and use it as a signal-generator in a more complex synth, then use `play-buf` for example:
