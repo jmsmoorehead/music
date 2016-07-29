@@ -88,7 +88,7 @@ It is also possible to send MIDI messages to a receiver (Why not make the comput
 
 ```clj
 (let [receiver (first (midi-connected-receivers))]
-  ;Play a midi note c4 at 80 velocity for 1 second on the fourth channel
+  ;Play a midi note c4 at 80 velocity for 1 millisecond on the fourth channel
   ;Note that the channel is zero-indexed, whereas normal mixers/midi devices start counting them from 1.
   (overtone.midi/midi-note receiver (note :c4) 80 1 3)
   
