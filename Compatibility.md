@@ -11,3 +11,4 @@ External Servers:
 
 * SuperCollider 3.4.x
 * SuperCollider 3.5.1
+* SuperCollider 3.6.6
