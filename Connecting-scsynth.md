@@ -25,6 +25,7 @@ Let's summarise that:
 * __Linux__ - [[Installing and Starting Jack]]
 * __Windows__ - No extra steps necessary.
   * **Note:** If using a 64-bit version of Windows, you need to install SuperCollider manually and [connect to an external server](#connecting-to-an-external-server).
+  * If you have trouble connecting to an external server, check in TaskManager that there are no zombie `scsynth.exe` processes, since they will block the port needed for `(connect-external-server)`. You also need to start a fresh repl after a failed connection attempt.
 * __OS X__ - No extra steps necessary.
 
 ### Connecting to an Internal Server
