@@ -24,6 +24,7 @@ Let's summarise that:
 
 * __Linux__ - [[Installing and Starting Jack]]
 * __Windows__ - No extra steps necessary.
+** Note: If using a 64-bit version of Windows, you need to install SuperCollider manually and [connect to an external server](#connecting-to-an-external-server).
 * __OS X__ - No extra steps necessary.
 
 ### Connecting to an Internal Server
